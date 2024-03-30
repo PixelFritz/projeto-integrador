@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equipv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lança Caju - Login</title>
+
+        <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alice&family=Arimo:ital,wght@0,400..700;1,400..700&family=Cardo:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Questrial&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+
+        <style>
+            .centro {
+                text-align: center;
+            }
+
+            body::before {
+                content: "";
+                background-image: url(imagens/bg.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: -1;
+                opacity: 1;
+            }
+
+            body {
+                font-family: Arial, Helvetica, sans-serif; 
+                background-image: -o-linear-gradient( yellow, blue);
+                margin: 0;
+            }
+
+            .cabecalho{
+                display: flex;
+                justify-content: center;
+                padding: 50px;
+            }
+        
+            div {
+                position: absolute;
+                margin: 0;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 80px;
+                border-radius: 15px;
+                width: 550px;
+            }
+
+            .login {
+                font-family: 'Questrial', sans-serif;
+            }
+
+            h1{
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            h3 {
+                font-size: 14px;
+                margin: 25px 0 5px 0;
+            }
+        
+            a {
+                font-family: 'Questrial', sans-serif;
+                font-size: 12px;
+                margin: 2px;
+                color: #5271FF;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: rgb(20, 20, 20);
+                text-decoration: underline;
+            }
+
+            input{
+                color: rgb(20, 20, 20);
+                background-color: #FFEC9D;
+                border-radius: 50px;
+                margin: 0px;
+                padding: 15px;
+                height: 10px;
+                width: 93%;
+                border: 0px;
+                outline: none;
+                font-size: 15px;
+            }
+        
+            button {
+                background-color: white;
+                border: none;
+                padding: 5px;
+                width: 98%;
+                border-radius: 10px;
+                color: black;
+                border: solid 3px #FFEC9D;
+                font-size: 15px;
+                font-family: 'Questrial', sans-serif;
+                border-radius: 50px;
+            }
+
+            button:hover {
+                background-color: white;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header class="cabecalho" >
+            <img src="imagens/Marca.jpg" alt="Logo Lança Caju" width="200px">
+        </header>
+        <div class="login">
+            <h1 class="centro">Acesse com seu login ou crie sua conta.</h1>
+            <h2 class="centro">Informe seu e-mail ou CPF para continuar.</h2>
+            <h3>E-mail ou CPF:</h3> 
+            <input type="text">
+            <br>
+            <h3>Senha:</h3>
+            <input type="password">
+            <br><br>
+            <button class="centro">Enviar</button>
+            <a href="" class="link-senha">Esqueceu a senha?<a>
+        </div>
+    </body>
+
+</html>
