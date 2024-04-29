@@ -1,167 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lança Caju - Home</title>
-    <link rel="shortcut icon" href="./src/icons/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lança Caju - Home</title>
+  <link rel="shortcut icon" href="./src/icons/favicon.ico" type="image/x-icon">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Alice&family=Arimo:ital,wght@0,400..700;1,400..700&family=Cardo:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Questrial&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alice&family=Arimo:ital,wght@0,400..700;1,400..700&family=Cardo:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Questrial&display=swap"
+    rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/scrollbar.css">
+  <link rel="stylesheet" href="./css/scrollbar.css">
 
-    <style>
+  <style>
+    body {
+      margin: 0;
+    }
 
-        .cartao-produto:hover,
-        .listagem-roupas:hover {
-            cursor: pointer;
-        }
+    header {
+      margin: 0;
+    }
 
-        .listagem-roupas {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0px;
-            justify-content: center;
-        }
+    header {
+      display: block;
+      height: 221px;
+      background-image: linear-gradient(to right, #fffc3083, #FDFDFD);
+      width: 945px;
+      margin: auto;
+      padding: 0;
+      margin-top: 50px;
+    }
 
-        .cartao-produto {
-            background-color: rgb(241, 241, 241);
-            display: flex;
-            width: 200px;
-            height: 385px;
-            margin: 15px;
-            padding: 5px;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            border-radius: 2px;
-        }
+    header > p {
+      margin: 0;
+      padding: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      font-family: 'Questrial', sans-serif;
+    }
 
-        .roupa {
-            justify-content: center;
-            width: 200px;
-            height: 300px;
-            margin: 0;
-        }
+    header > p > a{
+      text-decoration: none;
+      color: black;
+      font-family: 'Cardo', sans-serif;
+      margin-left: 4px;
+    }
 
-        .descricao {
-            text-align: center;
-            font-family: 'Questrial', sans-serif;
-            margin: 0;
-            padding: 5px;
-        }
+    .banner {
+      width: 945px;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      padding: 0 0 25px 0;
+    }
 
-        .preco {
-            text-align: center;
-            font-family: 'Questrial', sans-serif;
-            font-size: 20px;
-            margin: 0;
-        }
-        nav>a:hover {
-            background-color: rgb(241, 241, 241);
-          cursor: pointer;  
-        }
-        nav>a{
-         color:black; 
-         text-decoration: none;
-         padding: 10px;
-         justify-content: center;
-         background-color: darkorchid;
-         border-radius: 3px;
-         font-family: 'Nunito', sans-serif;
-         font-size: 12px;
-        }
+    .banner:hover {
+      cursor: pointer;
+    }
 
-    </style>
+    header > a:hover {
+      cursor: default;
+    }
+
+    nav {
+      width: 945px;
+      margin: auto;
+    }
+
+    nav>ul>li>a:hover {
+      cursor: pointer;
+      text-decoration: underline rgba(0, 0, 0, 0.384) 3px;
+    }
+
+    nav > ul {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    
+    nav>ul>li {
+      display: inline-flex;
+      width: 100%;
+    }
+
+    nav>ul>li>a {
+      display: block;
+      color: black;
+      text-decoration-line: none;
+      margin: 0;
+      background-color: white;
+      padding: 10px;
+      width: 105px;
+      border-radius: 0;
+      font-family: 'Nunito', sans-serif;
+      font-size: 12px;
+    }
+
+    .cartao-produto:hover {
+      cursor: pointer;
+      background-color: rgb(241, 241, 241);
+      transform: scale(1.01);
+    }
+
+    .listagem-roupas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+      margin: auto;
+      padding: 10px;
+    }
+
+    .cartao-produto {
+      display: flex;
+      width: 200px;
+      height: 385px;
+      margin: 15px;
+      padding: 5px;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      border-radius: 2px;
+    }
+
+    .roupa {
+      justify-content: center;
+      width: 200px;
+      height: 300px;
+      margin: 0;
+    }
+
+    .descricao {
+      text-align: center;
+      font-family: 'Questrial', sans-serif;
+      margin: 0;
+      padding: 5px;
+    }
+
+    .preco {
+      text-align: center;
+      font-family: 'Questrial', sans-serif;
+      font-size: 20px;
+      margin: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    body>section>div>div>ul>li>a {
+      text-decoration: none;
+      color: black;
+    }
+
+    body>section>div>div>ul>li>a:hover {
+      color: #5271FF;
+      text-decoration: underline;
+    }
+
+    .footer {
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0px;
+      justify-content: space-between;
+      background-color: antiquewhite;
+      width: 100%;
+      margin-top: 100px;
+      background-image: linear-gradient(to right, #ffa142dc, #fffc3083);
+      font-family: 'Alice', sans-serif;
+      border-top: 3px solid black;
+    }
+
+    .footer-main-div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 100%;
+      margin: 10px 150px 10px 150px;
+      padding: 5px;
+      justify-content: space-between;
+    }
+
+    .footer-secoes {
+      display: flex;
+      flex-direction: column;
+      width: 230px;
+      justify-content: first baseline;
+      margin: 10px;
+      padding: 10px;
+
+    }
+
+    .footer-diferente {
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      width: 100%;
+      border-top: 3px solid black;
+    }
+
+    .footer-secoes-2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 5px 150px 5px 150px;
+      padding: 10px;
+    }
+
+    .titulos {
+      font-size: 18px;
+      margin: 5px;
+      padding: 3px;
+    }
+
+    .blank {
+      display: flex;
+      width: 100%;
+      height: 100px;
+      background-image: linear-gradient(to right, #ffa142dc, #fffc3083);
+      border-top: 3px solid black;
+    }
+  </style>
 
 </head>
+
 <body>
-    <header>
-        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="></a>
-            <img> src="./src/imagens/image.png" alt="banner da coleção de verão" class="Banner">
-        </a>
-    </header>
-    <nav> align="center">
-       <a href ="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">novidades</a>
-           <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">novidades</a>
-               <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">camisa</a>
-                   <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">cropped</a>
-                       <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">conjunto</a>
-                 <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">macacão</a>
-                <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">short</a>
-            <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">t-shirt</a>
-                <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">vestido</a>
-                
-            
-       </a> 
-    </nav>
-    <main>
-        <div>
-            <ul class="listagem-roupas">
-                <li class="cartao-produto" tabindex="0">
-                    <img src="./src/imagens/roupas/vestido-vermelho.png" alt="Vestido Vermelho Palmeira" class="roupa">
-                    <p class="descricao">Vestido Vermelho Palmeira | Lança Caju</p>
-                    <p class="preco">R$ 270,00</p>
-                </li>
-                <li class="cartao-produto" tabindex="0">
-                    <img src="./src/imagens/roupas/pantalona+cropped.png" alt="Pantalona e Cropped Preto com Estampas" class="roupa">
-                    <p class="descricao">Pantalona + Cropped Morcego | Lança Caju</p>
-                    <p class="preco">R$ 350,00</p>
-                </li>
-                <li class="cartao-produto" tabindex="0">
-                    <img src="./src/imagens/roupas/macacão-azul.png"  alt="Macacão Azul com Estampas de Frutas e Animais" class="roupa">
-                    <p class="descricao">Macacão Azul Abacaxi | Lança Caju</p>
-                    <p class="preco">R$ 330,00</p>
-                </li>
-                <li class="cartao-produto" tabindex="0">
-                    <img src="./src/imagens/roupas/macacão-flor-de-caju.png" alt="Macacão Flor de Caju Amarelo com Estampas de Frutas e Folhas" class="roupa">
-                    <p class="descricao">Macacão FLor De Caju | Lança Caju</p>
-                    <p class="preco">R$ 230,00</p>
-                </li>
-            </ul>
-        </div>
-    </main>
-    <section class="footer">
-      <div class="footer-row">
-        <div class="footer-col">
-          <h4>Ajuda</h4>
-          <ul class="links">
-            <li><a href="#">Atendimento</a></li>
-            <li><a href="#">Troca e Devolução</a></li>
-            <li><a href="#">Canal de Denúncias</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Sobre</h4>
-          <ul class="links">
-            <li><a href="#">A empresa Lança Caju</a></li>
-            <li><a href="#">Lojistas</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Fale Conosco</h4>
-          <ul class="links">
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Email</a></li>
-          </ul>
-        </div>
-          <div class="icons">
-            <img src="Css/Img/instagram.png" width="15">
-            <img src="Css/Img/whatsapp.png" width="15">
-            <img src="Css/Img/logotipo-do-pinterest.png" width="15">
-            <img src="Css/Img/tik-tok.png" width="15">
-            <div>
-              <h4>Formas de Pagamento</h4>
-              <img src="Css/Img/cartao-de-credito.png" width="15">
-              <img src="Css/Img/pix.png" width="15">
-            </div>
-          </div>
-        </div>
+  <header>
+    <p>FRETE GRÁTIS a partir de R$ 199,90 em compras<a href="#">*Veja condições</a></p>
+    <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="./src/imagens/image.png" alt="banner da coleção de verão" class="banner"></a>
+    </a>
+  </header>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">NOVIDADES</a>
+        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CAMISA</a>
+        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CROPPED</a>
+        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CONJUNTO</a>
+        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">MACACÃO</a>
+        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">SHORT</a>
+        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">T-SHIRT</a>
+        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">VESTIDO</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <div class="main-lista-roupas">
+      <ul class="listagem-roupas">
+        <li class="cartao-produto" tabindex="0">
+          <img src="./src/imagens/roupas/vestido-vermelho.png" alt="Vestido Vermelho Palmeira" class="roupa">
+          <p class="descricao">Vestido Vermelho Palmeira | Lança Caju</p>
+          <p class="preco">R$ 270,00</p>
+        </li>
+        <li class="cartao-produto" tabindex="0">
+          <img src="./src/imagens/roupas/pantalona+cropped.png" alt="Pantalona e Cropped Preto com Estampas"
+            class="roupa">
+          <p class="descricao">Pantalona + Cropped Morcego | Lança Caju</p>
+          <p class="preco">R$ 350,00</p>
+        </li>
+        <li class="cartao-produto" tabindex="0">
+          <img src="./src/imagens/roupas/macacão-azul.png" alt="Macacão Azul com Estampas de Frutas e Animais"
+            class="roupa">
+          <p class="descricao">Macacão Azul Abacaxi | Lança Caju</p>
+          <p class="preco">R$ 330,00</p>
+        </li>
+        <li class="cartao-produto" tabindex="0">
+          <img src="./src/imagens/roupas/macacão-flor-de-caju.png"
+            alt="Macacão Flor de Caju Amarelo com Estampas de Frutas e Folhas" class="roupa">
+          <p class="descricao">Macacão FLor De Caju | Lança Caju</p>
+          <p class="preco">R$ 230,00</p>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <section class="footer">
+    <div class="footer-main-div">
+      <div class="footer-secoes">
+        <h1 class="titulos">Ajuda</h1>
+        <ul class="links">
+          <li><a href="#">Atendimento</a></li>
+          <li><a href="#">Troca e Devolução</a></li>
+          <li><a href="#">Canal de Denúncias</a></li>
+        </ul>
       </div>
-    </section>
+
+      <div class="footer-secoes">
+        <h1 class="titulos">Sobre</h1>
+        <ul class="links">
+          <li><a href="#">A empresa Lança Caju</a></li>
+          <li><a href="#">Lojistas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-secoes">
+        <h1 class="titulos">Fale Conosco</h1>
+        <ul class="links">
+          <li><a href="tel:5562981531797">+55 (62)9 8153-1797</a></li>
+          <li><a href="mailto:lancacaju@gmail.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-diferente">
+      <div class="footer-secoes-2">
+        <h1 class="titulos">Formas de Pagamento</h1>
+        <img src="Css/Img/cartao-de-credito.png" width="15">
+        <img src="Css/Img/pix.png" width="15">
+      </div>
+
+      <div class="footer-secoes-2"">
+          <img src=" Css/Img/instagram.png" width="15">
+        <img src="Css/Img/whatsapp.png" width="15">
+        <img src="Css/Img/logotipo-do-pinterest.png" width="15">
+        <img src="Css/Img/tik-tok.png" width="15">
+      </div>
+    </div>
+    <div class="blank">
+      <p></p>
+    </div>
+  </section>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,64 +13,91 @@
             box-sizing: border-box;
         }
 
+        .topo {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
         /* Estilizando o cabeçalho */
         header {
-            background-color: #e9f363;
             color: #fff;
             padding: 10px 0;
             text-align: center;
+            justify-content: space-between;
+        }
+
+        .telefone {
+            text-decoration: none;
+            color: black;
+            display: flex;
+            width: 173px;
+            justify-content: left;
+            margin: 20px 0 0 20px;
+        }
+
+        .cabecalho {
+            padding: 10px;
+            width: 250px;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            margin-left: 340px;
+        }
+
+        .login {
+            display: grid;
+            height: 15px;
+            color: black;
+            justify-content: center;
+        }
+
+        .login>a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .icone-login-pesquisa {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            flex-direction: row;
+            margin: 20px 20px 0 0;
+            text-decoration: none;
         }
 
         /* Estilizando a barra de pesquisa */
         .search-bar {
-            width: 300px;
-            padding: 8px;
-            border: none;
-            border-radius: 5px;
+            width: 250px;
+            height: 30px;
+            padding: 15px;
+            margin: 0;
+            border: solid rgba(0, 0, 0, 0.596) 2px;
+            border-radius: 50px;
             margin-right: 10px;
-        }
-
-        /* Estilizando os botões */
-        .header-button {
-            background-color: #555555;
-            color: #fff;
-            padding: 8px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        /* Estilizando o link home */
-        .home-link {
-            text-decoration: none;
-            color: #000000;
-            margin-right: 10px;
-        }
-
-        /* Estilizando o link de ajuda */
-        .help-link {
-            text-decoration: none;
-            color: #000000;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <!-- Barra de pesquisa -->
-        <input type="text" class="search-bar" placeholder="Pesquisar">
-
-        <!-- Botão de carrinho -->
-        <button class="header-button">Carrinho</button>
-
-        <!-- Botão de login -->
-        <button class="header-button">Login</button>
-
-        <!-- Link para a home -->
-        <a href="#" class="home-link">Home</a>
-
-        <!-- Link para a página de ajuda -->
-        <a href="#" class="help-link">Ajuda</a>
+    <header class="topo">
+        <div>
+            <a href="tel:5562981531797" class="telefone" tabindex="0"><img src="" alt="telefone">(62)98153-1797</a>
+        </div>
+        <div>
+            <a href="index.html" class="cabecalho" tabindex="0">
+                <img src="./src/imagens/Marca.png" alt="Marca Lança Caju" width="150px">
+            </a>
+        </div>
+        <div class="icone-login-pesquisa">
+            <!-- Barra de pesquisa -->
+            <input type="text" class="search-bar" placeholder="Pesquisar" tabindex="0">
+            <p class="login">Seja bem-vindo(a)!<a href="login.html" tabindex="0">Entre ou cadastre-se</a></p>
+            <a href="#"><img src="" alt="P" tabindex="0"></a>
+            <a href="#"><img src="" alt="F" tabindex="0"></a>
+            <a href="#"><img src="" alt="C" tabindex="0"></a>
+            <a href=""><img src="" alt="A" tabindex="0"></a>
+        </div>
     </header>
 </body>
+
 </html>
