@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lança Caju - Home</title>
-  <link rel="shortcut icon" href="./src/icons/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./src/favicon/favicon.ico" type="image/x-icon">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,17 +24,104 @@
       margin: 0;
     }
 
-    header {
+    .alinhar-topo {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .topo {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Estilizando o cabeçalho */
+    .topo {
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      justify-content: space-between;
+    }
+
+    .icones {
+      width: 30px;
+      height: 30px;
+      padding: 3px;
+    }
+
+    .telefone {
+      text-decoration: none;
+      color: black;
+      display: flex;
+      width: 173px;
+      justify-content: left;
+      margin: 20px 0 0 20px;
+      align-items: center;
+    }
+
+    .cabecalho {
+      padding: 5px;
+      width: 200px;
+      display: flex;
+      margin: auto;
+      justify-content: center;
+      margin-left: 350px;
+    }
+
+    .login {
+      display: grid;
+      height: 15px;
+      color: black;
+      justify-content: center;
+    }
+
+    .login>a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .login>a:hover {
+      text-decoration: underline;
+      color: #5271FF;
+    }
+
+    .icone-login-pesquisa {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      flex-direction: row;
+      margin: 0 ;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    /* Estilizando a barra de pesquisa */
+    .search-bar {
+      width: 200px;
+      height: 5px;
+      padding: 15px;
+      margin: 0;
+      border: solid rgba(0, 0, 0, 0.596) 2px;
+      border-radius: 50px;
+      /*margin-right: 10px;*/
+      margin-top: 16px;
+    }
+
+    .header-links {
+      margin-top: 15px;
+    }
+
+    .header-banner {
       display: block;
       height: 221px;
       background-image: linear-gradient(to right, #fffc3083, #FDFDFD);
       width: 945px;
       margin: auto;
       padding: 0;
-      margin-top: 50px;
+      margin-top: 30px;
     }
 
-    header > p {
+    .header-banner>p {
       margin: 0;
       padding: 4px;
       display: flex;
@@ -44,7 +131,7 @@
       font-family: 'Questrial', sans-serif;
     }
 
-    header > p > a{
+    .header-banner>p>a {
       text-decoration: none;
       color: black;
       font-family: 'Cardo', sans-serif;
@@ -63,7 +150,7 @@
       cursor: pointer;
     }
 
-    header > a:hover {
+    .header-banner>a:hover {
       cursor: default;
     }
 
@@ -77,13 +164,13 @@
       text-decoration: underline rgba(0, 0, 0, 0.384) 3px;
     }
 
-    nav > ul {
+    nav>ul {
       text-align: center;
       margin: 0;
       padding: 0;
       list-style-type: none;
     }
-    
+
     nav>ul>li {
       display: inline-flex;
       width: 100%;
@@ -235,21 +322,53 @@
 
 <body>
   <header>
-    <p>FRETE GRÁTIS a partir de R$ 199,90 em compras<a href="#">*Veja condições</a></p>
-    <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="./src/imagens/image.png" alt="banner da coleção de verão" class="banner"></a>
-    </a>
+    <div class="alinhar-topo">
+      <div class="topo">
+        <div>
+          <a href="tel:5562981531797" class="telefone" tabindex="0"><img src="./src/icones/telefone.png" alt="telefone" class="icones">(62)98153-1797</a>
+        </div>
+        <div>
+          <a href="index.html" class="cabecalho" tabindex="0">
+            <img src="./src/imagens/Marca.png" alt="Marca Lança Caju" width="150px">
+          </a>
+        </div>
+        <div class="icone-login-pesquisa">
+          <!-- Barra de pesquisa -->
+          <input type="text" class="search-bar" placeholder="Pesquisar" tabindex="0">
+          <p class="login">Seja bem-vindo(a)!<a href="login.html" tabindex="0">Entre ou cadastre-se</a></p>
+          <a href="#" class="header-links"><img src="./src/icones/perfil.png" alt="P" tabindex="0" class="icones"></a>
+          <a href="#" class="header-links"><img src="./src/icones/favoritos.png" alt="F" tabindex="0" class="icones"></a>
+          <a href="#" class="header-links"><img src="./src/icones/sacola.png" alt="C" tabindex="0" class="icones"></a>
+          <a href="#" class="header-links"><img src="./src/icones/acessibilidade.png" alt="A" tabindex="0" class="icones"></a>
+        </div>
+      </div>
+    </div>
+    <div class="header-banner">
+      <p>FRETE GRÁTIS a partir de R$ 199,90 em compras<a href="#">*Veja condições</a></p>
+      <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        target="_blank"><img src="./src/imagens/image.png" alt="banner da coleção de verão" class="banner"></a>
+      </a>
+    </div>
   </header>
   <nav>
     <ul>
       <li>
-        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">NOVIDADES</a>
-        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CAMISA</a>
-        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CROPPED</a>
-        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CONJUNTO</a>
-        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">MACACÃO</a>
-        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">SHORT</a>
-        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">T-SHIRT</a>
-        <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">VESTIDO</a>
+        <a
+          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">NOVIDADES</a>
+        <a
+          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CAMISA</a>
+        <a
+          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CROPPED</a>
+        <a
+          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CONJUNTO</a>
+        <a
+          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">MACACÃO</a>
+        <a
+          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">SHORT</a>
+        <a
+          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">T-SHIRT</a>
+        <a
+          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">VESTIDO</a>
       </li>
     </ul>
   </nav>
@@ -312,15 +431,15 @@
     <div class="footer-diferente">
       <div class="footer-secoes-2">
         <h1 class="titulos">Formas de Pagamento</h1>
-        <img src="Css/Img/cartao-de-credito.png" width="15">
-        <img src="Css/Img/pix.png" width="15">
+        <img src="./src/icones/cartoes.png" class="icones">
+        <img src="./src/icones/pix.png" class="icones">
       </div>
 
-      <div class="footer-secoes-2"">
-          <img src=" Css/Img/instagram.png" width="15">
-        <img src="Css/Img/whatsapp.png" width="15">
-        <img src="Css/Img/logotipo-do-pinterest.png" width="15">
-        <img src="Css/Img/tik-tok.png" width="15">
+      <div class="footer-secoes-2">
+        <a href="https://www.instagram.com/lancacaju/"><img src="./src/icones/intagram.png" class="icones"></a>
+        <a href="https://wa.me/message/CWFKIY27JVVXB1"><img src="./src/icones/whatsapp.png" class="icones"></a>
+        <a href=""><img src="./src/icones/pinterest.png" class="icones"></a>
+        <a href=""><img src="./src/icones/tiktok.png" class="icones"></a>
       </div>
     </div>
     <div class="blank">
