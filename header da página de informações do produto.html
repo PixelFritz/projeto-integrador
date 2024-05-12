@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <style>
+        /* Estilos para o header */
+        header {
+            background-color: #f2f2f2;
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Estilos para os ícones */
+        .icon {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        /* Estilos para o texto de boas-vindas */
+        .welcome-text {
+            cursor: pointer;
+        }
+
+        /* Estilos para a barra de pesquisa */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .search-bar input[type="text"] {
+            border: none;
+            outline: none;
+            padding: 5px;
+        }
+
+        /* Estilos para as opções do meio */
+        .options {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .option {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        /* Alinha os ícones horizontalmente */
+        .icons {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Estilos para a frase de frete grátis */
+        .free-shipping {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="contact-info">(62) 98153-17971</div>
+            <div class="icons">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar">
+                </div>
+                <div class="welcome-text">Entre ou cadastre-se | Seja bem-vindo(a)</div>
+                <div class="icon user">&#x1F464;</div>
+                <div class="icon heart">&#x2665;</div>
+                <div class="icon bag">&#128722;</div>
+            </div>
+        </div>
+        <div class="free-shipping">
+            FRETE GRÁTIS a partir de R$ 199,90 em compras. *Veja condições.
+        </div>
+        <div class="options">
+            <div class="option">NOVIDADES</div>
+            <div class="option">CALÇA</div>
+            <div class="option">CAMISA</div>
+            <div class="option">CROPPED</div>
+            <div class="option">CONJUNTO</div>
+            <div class="option">MACACÃO</div>
+            <div class="option">SHORT</div>
+            <div class="option">T-SHIRT</div>
+            <div class="option">VESTIDO</div>
+        </div>
+    </header>
+</body>
+</html>
