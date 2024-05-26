@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <script src="botaa.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Macacão Flor De Caju | Lança Caju</title>
@@ -22,7 +23,10 @@
  <option value="G">G</option>
  <option value="GG">GG</option>
  <select> 
-    <div class="descriçãodoproduto">
+        <button onclick="toggle('descriçãodoproduto')">Descrição do produto</button>
+    <button onclick="toggle('tabelas de medidas')">Tabela de medidas</button>
+
+    <div id="descriçãodoproduto">
         <h3>Descrição do produto</h3>
         <p>Experimente o estilo descontraído e vibrante com nosso macacão curto verde com estampas coloridas. Feito com tecido leve e respirável, este macacão é perfeito para dias ensolarados e aventuras urbanas.</p>
         <p>Design Vibrante: Apresenta uma variedade de estampas coloridas que adicionam um toque de diversão e energia ao seu visual.</p>
@@ -36,7 +40,7 @@
 
     </table>
     </div>
-    <div class="tabelas de medidas">
+    <div id="tabelas de medidas">
         <h4>Tabela de Medidas</h4>
         <table>
             <tr>
