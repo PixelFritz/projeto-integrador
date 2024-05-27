@@ -1,47 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <script src="botaa.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Macacão Flor De Caju | Lança Caju</title>
+    <script src="script.js" ></script>
+
 </head>
 <body>
  <div class="macacão"></div> 
  <img src="imagem.jpg" alt="Macacão Flor De Caju | Lança Caju">
  <h2> Macacão Flor De Caju | Lança Caju </h2>
- <p class="preço">R$230,00</p>
  <label for="cor"> Cor:</label>
  <select name='cor' id= 'cor'>
  <option value="verde">Verde</option>
  </select>
  <label for="Tamanho"> Tamanho:</label>
  <select name='Tamanho' id= 'Tamanho'>
- <option value="PP">PP</option>
  <option value="P">P</option>
  <option value="M">M</option>
  <option value="G">G</option>
- <option value="GG">GG</option>
  <select> 
-        <button onclick="toggle('descriçãodoproduto')">Descrição do produto</button>
-    <button onclick="toggle('tabelas de medidas')">Tabela de medidas</button>
-
-    <div id="descriçãodoproduto">
+    <p class="preço">R$230,00</p>
+    <title>mostrar e esconder</title>
         <h3>Descrição do produto</h3>
-        <p>Experimente o estilo descontraído e vibrante com nosso macacão curto verde com estampas coloridas. Feito com tecido leve e respirável, este macacão é perfeito para dias ensolarados e aventuras urbanas.</p>
+        <button onclick="toggle('Descrição')">Mostrar/Esconder</button>
+        <div id="Descrição" 
+        <p>O estilo descontraído e vibrante com nosso macacão curto verde com estampas coloridas. Feito com tecido leve e respirável, este macacão é perfeito para dias ensolarados e aventuras urbanas.</p>
         <p>Design Vibrante: Apresenta uma variedade de estampas coloridas que adicionam um toque de diversão e energia ao seu visual.</p>
         <p>Confortável e Versátil: O tecido macio e confortável permite movimentos livres enquanto mantém você fresco e confortável durante todo o dia.</p>
         <p>Corte Moderno: O ajuste elegante e contemporâneo oferece um visual moderno e feminino, complementando sua figura de forma lisonjeira.</p>
         <p>Ideal para Todas as Ocasiões: Perfeito para um passeio casual, um dia de compras com amigos ou uma escapada de fim de semana. Este macacão é uma escolha versátil para qualquer ocasião.</p>
         <p>Cor: Verde com estampas coloridas</p>
         <p>Tecido: Leve e respirável</p>
-        <p>Tamanhos Disponíveis: PP, P, M, G, GG</p>
+        <p>Tamanhos Disponíveis: P, M, G</p>
         <P>Material: 100% poliéster</P>
-
-    </table>
-    </div>
-    <div id="tabelas de medidas">
-        <h4>Tabela de Medidas</h4>
+ </div>
+           <h3>Tabela de Medidas</h3>
+ <button onclick="toggle('medidas')">Mostrar/Esconder</button>
+   
+ <div id="medidas" >
+    
+       
         <table>
             <tr>
                 <th>Tamanho</th>
@@ -49,12 +50,7 @@
                 <th>Cintura</th>
                 <th>Quadril</th>
             </tr>
-            <tr>
-                <td>PP</td>
-                <td>75cm - 79cm</td>
-                <td>59cm - 63cm</td>
-                <td>83cm - 87cm</td>
-            </tr>
+            
             <tr>
                 <td>P</td>
                 <td>80cm - 84cm</td>
@@ -73,24 +69,30 @@
                 <td>74cm - 78cm</td>
                 <td>98cm - 102cm</td>
             </tr>
-            <tr>
-                <td>GG</td>
-                <td>95cm - 99cm</td>
-                <td>79cm - 83cm</td>
-                <td>103cm - 107cm</td>
-            </tr>
+            
 </table>
+</div>
+    <h3>            </h3>
+
 <button> Adicionar a sacola</button>
+<h3>                      </h3>
 
 <c class="ConsultarFrete"> Consulte seu frete</c> 
 <div id="consultar-frete">
+    
+    
     <input type="text" id="cep" placeholder="Digite seu CEP">
-    <button class="botao-frete" onclick="consultarFrete()" style="display: none;"> Consultar Frete</button>
+    
+    <button> Ok</button>
 </div>
-<a href="link-para-consulta-de-frete" class="botao-frete" style="display: none;">Consultar Frete</a>
-<button> Ok</button>
-<button> Não sei meu CEP</button>
- 
+
+    <button onclick="naoSeiCep()"> Não sei meu CEP</button>
+<script>
+function naoSeiCep() { 
+   this.window.location.href="https://www.google.com/maps";
+}
+</script>
  <div>
 </body>
 </html>
+     
