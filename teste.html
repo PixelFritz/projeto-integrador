@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&amp;family=Arimo:ital,wght@0,400..700;1,400..700&amp;family=Cardo:ital,wght@0,400;0,700;1,400&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;family=Questrial&amp;display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        margin: 0;
+      }
+  
+      header {
+        margin: 0;
+      }
+  
+      .alinhar-topo {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+  
+      .topo {
+        display: flex;
+        flex-wrap: wrap;
+      }
+  
+      /* Estilizando o cabeçalho */
+      .topo {
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+        justify-content: space-between;
+      }
+  
+      .icones {
+        width: 30px;
+        height: 30px;
+        padding: 3px;
+      }
+  
+      .telefone {
+        text-decoration: none;
+        color: black;
+        display: flex;
+        width: 173px;
+        justify-content: left;
+        margin: 20px 0 0 20px;
+        align-items: center;
+        font-family: 'Questrial', sans-serif;
+      }
+  
+      .cabecalho {
+        padding: 5px;
+        width: 200px;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        margin-left: 350px;
+      }
+  
+      .login {
+        display: grid;
+        height: 15px;
+        color: black;
+        justify-content: center;
+      }
+  
+      .login>a {
+        text-decoration: none;
+        color: black;
+      }
+  
+      .login>a:hover {
+        text-decoration: underline;
+        color: #5271FF;
+      }
+  
+      .icone-login-pesquisa {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        flex-direction: row;
+        margin: 0 ;
+        text-decoration: none;
+        margin-right: 20px;
+        font-family: 'Questrial', sans-serif;
+      }
+  
+      /* Estilizando a barra de pesquisa */
+      .search-bar {
+        width: 188px;
+        height: 5px;
+        padding: 15px;
+        margin: 0;
+        border: solid rgba(0, 0, 0, 0.596) 2px;
+        border-radius: 50px;
+        /*margin-right: 10px;*/
+        margin-top: 16px;
+      }
+  
+      .header-links {
+        margin-top: 15px;
+        height: 36px;
+      }
+  
+      .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 5px;
+        width: 150px;
+        background-color: white;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        text-align: left;
+        justify-content: center;
+        font-family: 'Questrial', sans-serif;
+      }
+  
+      .menu>ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+  
+      .menu>ul>li {
+        border-bottom: 1px solid #ccc;
+      }
+  
+      .menu>ul>li>a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #333;
+      }
+  
+      .menu>ul>li>a:hover {
+        background-color: rgb(241, 241, 241)  ;
+      }
+  
+      .faixa {
+        display: block;
+        height: 25px;
+        background-image: linear-gradient(to right, #fffc3083, #FDFDFD);
+        width: 945px;
+        margin: auto;
+        padding: 0;
+        margin-top: 30px;
+      }
+  
+      .faixa>p {
+        margin: 0;
+        padding: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        font-family: 'Questrial', sans-serif;
+      }
+  
+      .faixa>p>a {
+        text-decoration: none;
+        color: black;
+        font-family: 'Cardo', sans-serif;
+        margin-left: 4px;
+      }
+
+      .faixa-2 {
+        display: block;
+        height: 25px;
+        background-image: linear-gradient(to right, #FDFDFD, #fffc3083);
+        width: 945px;
+        margin: auto;
+        padding: 0;
+      }
+
+      nav {
+      width: 945px;
+      margin: auto;
+    }
+
+    nav>ul>li>a:hover {
+      cursor: pointer;
+      text-decoration: underline rgba(0, 0, 0, 0.384) 3px;
+    }
+
+    nav>ul {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    nav>ul>li {
+      display: inline-flex;
+      width: 100%;
+    }
+
+    nav>ul>li>a {
+      display: block;
+      color: black;
+      text-decoration-line: none;
+      margin: 0;
+      background-color: white;
+      padding: 10px;
+      width: 105px;
+      border-radius: 0;
+      font-family: 'Nunito', sans-serif;
+      font-size: 12px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="alinhar-topo">
+          <div class="topo">
+            <div>
+              <a href="tel:5562981531797" class="telefone" tabindex="0"><img src="./src/icones/telefone.png" alt="telefone" class="icones">(62)98153-1797</a>
+            </div>
+            <div>
+              <a href="index.html" class="cabecalho" tabindex="0">
+                <img src="./src/imagens/Marca.png" alt="Marca Lança Caju" width="150px">
+              </a>
+            </div>
+            <div class="icone-login-pesquisa">
+              <!-- Barra de pesquisa -->
+              <input type="text" class="search-bar" placeholder="Pesquisar" tabindex="0">
+              <p class="login">Seja bem-vindo(a)!<a href="login.html" tabindex="0">Entre ou cadastre-se</a></p>
+              <a href="#" class="header-links"><img src="./src/icones/perfil.png" alt="P" class="icones"></a>
+              <a href="#" class="header-links"><img src="./src/icones/favoritos.png" alt="F" class="icones"></a>
+              <a href="#" class="header-links"><img src="./src/icones/sacola.png" alt="C" class="icones"></a>
+              <a href="#" class="header-links"><img src="./src/icones/acessibilidade2.png" alt="A" class="icones" id="menuAcessibilidade"></a>
+              <div id="menu" class="menu">
+                <ul>
+                  <li><a href="#" id="daltonismo">Daltonismo</a></li>
+                  <li><a href="#" id="dislexia">Dislexia</a></li>
+                  <li><a href="#" id="narrador">Narrador de Voz</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faixa">
+          <p>FRETE GRÁTIS a partir de R$ 199,90 em compras<a href="#">*Veja condições</a></p>
+        </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">NOVIDADES</a>
+          <a
+            href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CAMISA</a>
+          <a
+            href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CROPPED</a>
+          <a
+            href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CONJUNTO</a>
+          <a
+            href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">MACACÃO</a>
+          <a
+            href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">SHORT</a>
+          <a
+            href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">T-SHIRT</a>
+          <a
+            href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">VESTIDO</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="faixa-2">
+      <br>
+    </div>
+</body>
+</html>

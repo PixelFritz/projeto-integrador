@@ -1,0 +1,13 @@
+@font-face {
+    font-family: LexieReadable;
+    src: url(./src/fonte/LexieReadable-Bold.ttf);
+    src: url(./src/fonte/LexieReadable-Regular.ttf);
+}
+
+body {
+    font-family: '';
+}
+
+.font-alt {
+    font-family: 'LexieReadable';
+}
