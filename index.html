@@ -14,6 +14,10 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="./css/scrollbar.css">
+  <link rel="stylesheet" href="./css/popup.css">
+
+  <script src="./js/menu.js" defer></script>
+  <script src="./js/popup.js" defer></script>
 
   <style>
     body {
@@ -57,6 +61,7 @@
       justify-content: left;
       margin: 20px 0 0 20px;
       align-items: center;
+      font-family: 'Questrial', sans-serif;
     }
 
     .cabecalho {
@@ -93,11 +98,12 @@
       margin: 0 ;
       text-decoration: none;
       margin-right: 20px;
+      font-family: 'Questrial', sans-serif;
     }
 
     /* Estilizando a barra de pesquisa */
     .search-bar {
-      width: 200px;
+      width: 188px;
       height: 5px;
       padding: 15px;
       margin: 0;
@@ -109,6 +115,43 @@
 
     .header-links {
       margin-top: 15px;
+      height: 36px;
+    }
+
+    .menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 5px;
+      width: 150px;
+      background-color: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      text-align: left;
+      justify-content: center;
+      font-family: 'Questrial', sans-serif;
+    }
+
+    .menu>ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu>ul>li {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .menu>ul>li>a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .menu>ul>li>a:hover {
+      background-color: rgb(241, 241, 241)  ;
     }
 
     .header-banner {
@@ -336,10 +379,17 @@
           <!-- Barra de pesquisa -->
           <input type="text" class="search-bar" placeholder="Pesquisar" tabindex="0">
           <p class="login">Seja bem-vindo(a)!<a href="login.html" tabindex="0">Entre ou cadastre-se</a></p>
-          <a href="#" class="header-links"><img src="./src/icones/perfil.png" alt="P" tabindex="0" class="icones"></a>
-          <a href="#" class="header-links"><img src="./src/icones/favoritos.png" alt="F" tabindex="0" class="icones"></a>
-          <a href="#" class="header-links"><img src="./src/icones/sacola.png" alt="C" tabindex="0" class="icones"></a>
-          <a href="#" class="header-links"><img src="./src/icones/acessibilidade.png" alt="A" tabindex="0" class="icones"></a>
+          <a href="#" class="header-links"><img src="./src/icones/perfil.png" alt="P" class="icones"></a>
+          <a href="#" class="header-links"><img src="./src/icones/favoritos.png" alt="F" class="icones"></a>
+          <a href="#" class="header-links"><img src="./src/icones/sacola.png" alt="C" class="icones"></a>
+          <a href="#" class="header-links"><img src="./src/icones/acessibilidade2.png" alt="A" class="icones" id="menuAcessibilidade"></a>
+          <div id="menu" class="menu">
+            <ul>
+              <li><a href="#" id="daltonismo">Daltonismo</a></li>
+              <li><a href="#" id="dislexia">Dislexia</a></li>
+              <li><a href="#" id="narrador">Narrador de Voz</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -373,6 +423,13 @@
     </ul>
   </nav>
   <main>
+    <div id="popupMenu" class="popup">
+      <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h2>Bem-vindo ao site do Lança Caju!</h2>
+          <p>Esse site tem suporte de acessibilidade para Daltonismo, Dislexia e Cegueira.</p>
+      </div>
+  </div>
     <div class="main-lista-roupas">
       <ul class="listagem-roupas">
         <li class="cartao-produto" tabindex="0">
