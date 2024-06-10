@@ -1,0 +1,177 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 945px;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.main-img{
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 439px;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar img{
+    width: 80px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+.imgp img{
+width: 250px;
+border: 2px solid #ccc;
+border-radius: 5px;
+position: static;
+align-items: top;
+}
+.desc{
+    flex-direction: column;
+    margin-right: 50px;
+}
+.corb{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: greenyellow;
+    margin: 5px;
+}
+.corb:hover{
+    transform: scale(1.05);
+}
+.PMG{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.P{
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0%;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    
+}
+.M{
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0%;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+}
+.G{
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0%;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+}
+.P:hover{
+    transform: scale(1.05);
+}
+.M:hover{
+    transform: scale(1.05);
+}
+.G:hover{
+    transform: scale(1.05);
+}
+.adc{
+    background-color: #fae58e;
+    width: 280px;
+    height: 75px;
+    border-radius: 5%;
+    border: none;
+    font-family: 'nunito' sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+.adc:hover{
+    transform: scale(1.01);
+}
+.prodd{
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    font-family: 'nunito' sans-serif;
+    color: solid black;
+    background-color: white;
+    margin-left: 14px;
+    font-size: 14px;
+    margin-top: 17px;
+    position: relative;
+}
+#esconderDesc {
+    width: 397.5px;
+}
+.tab{
+    
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    font-family: 'nunito' sans-serif;
+    color: solid black;
+    background-color: white;
+    margin-left: 14px;
+    font-size: 14px;
+    margin-top: 17px ;
+position: relative;
+}
+.prodd:hover{
+    transform: scale(1.01);
+}
+.tab:hover{
+    transform: scale(1.01);
+}
+
+.dcep{
+    background-color: #c9c7cd;
+    border-radius: 50px;
+    border: black;
+    height: 30px;
+    width: 140px;
+    padding: 0 0 0 10px ;
+
+}
+.ok{
+    border-radius: 10px;
+    border: #ccc;
+    background-color: #c9c7cd;
+    height: 30px;
+    cursor: pointer;
+}
+.ok:hover{
+    transform: scale(1.01);
+}
+.nsei{
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    font-family: 'nunito' sans-serif;
+    color: solid black;
+    margin-top: 10px;
+}
