@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produto</title>
-    <script src="/js/descricaoMaximizar.js" defer></script>
+    <script src="/js/botaa.js" defer></script>
     <script src="/js/menu.js" defer></script>
     <script src="/js/popup.js" defer></script>
+    <link rel="stylesheet" href="/css/cssdiv.css">
     <link rel="stylesheet" href="/css/scrollbar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -221,15 +223,18 @@
         .esconder {
             display: none;
         }
-        .nunito{
-font-family: 'Nunito', sans-serif;
+
+        .nunito {
+            font-family: 'Nunito', sans-serif;
         }
-        .oswald{
-font-family: 'Oswald';
+
+        .oswald {
+            font-family: 'Oswald';
         }
     </style>
-    
+
 </head>
+
 <body>
     <header>
         <div class="alinhar-topo">
@@ -291,99 +296,127 @@ font-family: 'Oswald';
     <div class="faixa-2">
         <br>
     </div>
-    
-    <img src="imagem.jpg" alt="Macacão Flor De Caju | Lança Caju">
-    <h2 class="nunito"> Macacão Flor De Caju | Lança Caju </h2>
-    <div class="nunito">
-    <label for="cor"> Cor:</label>
-    <select name='cor' id='cor'>
-        <option class="oswald" value="verde">Verde</option>
-    </select>
-    <label for="Tamanho"> Tamanho:</label>
-    <select name='Tamanho' id='Tamanho'>
-        <option class="oswald" value="P">P</option>
-        <option class="oswald" value="M">M</option>
-        <option class="oswald" value="G">G</option>
-    </select>
+
+   
+
+
+    <div class="container">
+        <div class="main-img">
+            <div class="sidebar">
+                <div>
+                    <img src="image (2).png" class="img">
+                </div>
+                <div>
+                    <img src="image (3).png" class="img">
+                </div>
+                <div>
+                    <img src="image (5).png" class="img">
+                </div>
+
+            </div>
+            <div class="imgp">
+                <img src="image (1).png">
+
+            </div>
         </div>
-            <p class="preço">R$230,00</p>
-            <h3 class="nunito">Descrição do produto</h3>
-            <button id="buttonDesc">Mostrar Informações</button>
+        <div class="desc">
+            <h2 class="nunito"> Macacão Flor De Caju | Lança Caju </h2>
             <div class="nunito">
-            <div id="esconderDesc" class="esconder"> 
-                <p>O estilo descontraído e vibrante com nosso macacão curto verde com estampas
-                coloridas. Feito com tecido leve e respirável, este macacão é perfeito para dias ensolarados e aventuras
-                urbanas.</p>
-                <p>Design Vibrante: Apresenta uma variedade de estampas coloridas que adicionam um toque de diversão e
-                    energia ao seu visual.</p>
-                <p>Confortável e Versátil: O tecido macio e confortável permite movimentos livres enquanto mantém você
-                    fresco e confortável durante todo o dia.</p>
-                <p>Corte Moderno: O ajuste elegante e contemporâneo oferece um visual moderno e feminino, complementando
-                    sua figura de forma lisonjeira.</p>
-                <p>Ideal para Todas as Ocasiões: Perfeito para um passeio casual, um dia de compras com amigos ou uma
-                    escapada de fim de semana. Este macacão é uma escolha versátil para qualquer ocasião.</p>
-                <p>Cor: Verde com estampas coloridas</p>
-                <p>Tecido: Leve e respirável</p>
-                <p>Tamanhos Disponíveis: P, M, G</p>
-                <P>Material: 100% poliéster</P>
-            </div>
-            </div>
-            <h3 class="nunito">Tabela de Medidas</h3>
-            <button id="buttonMedidas">Mostrar Informações</button>
-<div class="nunito">
-            <div id="esconderMedidas" class="esconder">
+                <h2>Cor</h2>
+                <div class="desc">
+                    <button class="corb"></button>
+                    <div class="PMG">
+                        <button class="P">P</button>
+                        <button class="M">M</button>
+                        <button class="G">G</button>
+                    </div>
+                </div>
 
 
-                <table>
-                    <tr>
-                        <th>Tamanho</th>
-                        <th>Busto</th>
-                        <th>Cintura</th>
-                        <th>Quadril</th>
-                    </tr>
+                <button class="prodd" id="buttonDesc">Descrição do produto</button>
+                <div class="nunito">
+                    <div id="esconderDesc" class="esconder">
+                        <p>O estilo descontraído e vibrante com nosso macacão curto verde com estampas
+                            coloridas. Feito com tecido leve e respirável, este macacão é perfeito para dias ensolarados
+                            e aventuras
+                            urbanas.</p>
+                        <p>Design Vibrante: Apresenta uma variedade de estampas coloridas que adicionam um toque de
+                            diversão e
+                            energia ao seu visual.</p>
+                        <p>Confortável e Versátil: O tecido macio e confortável permite movimentos livres enquanto
+                            mantém você
+                            fresco e confortável durante todo o dia.</p>
+                        <p>Corte Moderno: O ajuste elegante e contemporâneo oferece um visual moderno e feminino,
+                            complementando
+                            sua figura de forma lisonjeira.</p>
+                        <p>Ideal para Todas as Ocasiões: Perfeito para um passeio casual, um dia de compras com amigos
+                            ou uma
+                            escapada de fim de semana. Este macacão é uma escolha versátil para qualquer ocasião.</p>
+                        <p>Cor: Verde com estampas coloridas</p>
+                        <p>Tecido: Leve e respirável</p>
+                        <p>Tamanhos Disponíveis: P, M, G</p>
+                        <P>Material: 100% poliéster</P>
+                    </div>
+                </div>
 
-                    <tr>
-                        <td class="oswald">P</td>
-                        <td>80cm - 84cm</td>
-                        <td>64cm - 68cm</td>
-                        <td>88cm - 92cm</td>
-                    </tr>
-                    <tr>
-                        <td class="oswald">M</td>
-                        <td>85cm - 89cm</td>
-                        <td>69cm - 73cm</td>
-                        <td>93cm - 97cm</td>
-                    </tr>
-                    <tr>
-                        <td class="oswald">G</td>
-                        <td>90cm - 94cm</td>
-                        <td>74cm - 78cm</td>
-                        <td>98cm - 102cm</td>
-                    </tr>
-
-                </table>
-            </div>
-            </div>
-            <h3> </h3>
-
-            <button class="nunito"> Adicionar a sacola</button>
-            <h3> </h3>
-<div class="nunito">
-            <c class="ConsultarFrete"> Consulte seu frete</c>
-            <div id="consultar-frete">
+                <button class="tab" id="buttonMedidas">Tabela de tamanhos</button>
+                <div class="nunito">
+                    <div id="esconderMedidas" class="esconder">
 
 
-                <input type="text" id="cep" placeholder="Digite seu CEP">
+                        <table>
+                            <tr>
+                                <th>Tamanho</th>
+                                <th>Busto</th>
+                                <th>Cintura</th>
+                                <th>Quadril</th>
+                            </tr>
 
-                <button class="oswald"> Ok</button>
-            </div>
-</div>
-            <button class="oswald"  onclick="naoSeiCep()"> Não sei meu CEP</button>
-            <script>
-                function naoSeiCep() {
-                    this.window.location.href = "https://www.google.com/maps";
-                }
-            </script>
-            <div>
+                            <tr>
+                                <td class="oswald">P</td>
+                                <td>80cm - 84cm</td>
+                                <td>64cm - 68cm</td>
+                                <td>88cm - 92cm</td>
+                            </tr>
+                            <tr>
+                                <td class="oswald">M</td>
+                                <td>85cm - 89cm</td>
+                                <td>69cm - 73cm</td>
+                                <td>93cm - 97cm</td>
+                            </tr>
+                            <tr>
+                                <td class="oswald">G</td>
+                                <td>90cm - 94cm</td>
+                                <td>74cm - 78cm</td>
+                                <td>98cm - 102cm</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <h3> </h3>
+
+                <button class="adc" class="nunito"> Adicionar a sacola</button>
+                <h3> </h3>
+                <div class="nunito">
+                    <c class="ConsultarFrete"> Consulte seu frete</c>
+                    <div id="consultar-frete">
+
+
+                        <input class="dcep" type="text" id="cep" placeholder="Digite seu CEP">
+
+                        <button class="ok" class="oswald"> Ok</button>
+                    </div>
+                </div>
+                <button class="nsei" class="oswald" onclick="naoSeiCep()"> Não sei meu CEP</button>
+                <script>
+                    function naoSeiCep() {
+                        this.window.location.href = "https://www.google.com/maps";
+                    }
+                </script>
+                <div>
+                </div>
 </body>
+
+
 </html>
