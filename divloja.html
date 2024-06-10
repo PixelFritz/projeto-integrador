@@ -8,7 +8,9 @@
     <script src="/js/menu.js" defer></script>
     <script src="/js/popup.js" defer></script>
     <link rel="stylesheet" href="/css/scrollbar.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Alice&amp;family=Arimo:ital,wght@0,400..700;1,400..700&amp;family=Cardo:ital,wght@0,400;0,700;1,400&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;family=Questrial&amp;display=swap"
         rel="stylesheet">
@@ -219,7 +221,14 @@
         .esconder {
             display: none;
         }
+        .nunito{
+font-family: 'Nunito', sans-serif;
+        }
+        .oswald{
+font-family: 'Oswald';
+        }
     </style>
+    
 </head>
 <body>
     <header>
@@ -254,7 +263,7 @@
             </div>
         </div>
         <div class="faixa">
-            <p>FRETE GRÁTIS a partir de R$ 199,90 em compras<a href="#">*Veja condições</a></p>
+            <p class="nunito">FRETE GRÁTIS a partir de R$ 199,90 em compras<a href="#">*Veja condições</a></p>
         </div>
     </header>
     <nav>
@@ -282,22 +291,25 @@
     <div class="faixa-2">
         <br>
     </div>
-    <div class="macacão"></div>
+    
     <img src="imagem.jpg" alt="Macacão Flor De Caju | Lança Caju">
-    <h2> Macacão Flor De Caju | Lança Caju </h2>
+    <h2 class="nunito"> Macacão Flor De Caju | Lança Caju </h2>
+    <div class="nunito">
     <label for="cor"> Cor:</label>
     <select name='cor' id='cor'>
-        <option value="verde">Verde</option>
+        <option class="oswald" value="verde">Verde</option>
     </select>
     <label for="Tamanho"> Tamanho:</label>
     <select name='Tamanho' id='Tamanho'>
-        <option value="P">P</option>
-        <option value="M">M</option>
-        <option value="G">G</option>
-        <select>
+        <option class="oswald" value="P">P</option>
+        <option class="oswald" value="M">M</option>
+        <option class="oswald" value="G">G</option>
+    </select>
+        </div>
             <p class="preço">R$230,00</p>
-            <h3>Descrição do produto</h3>
+            <h3 class="nunito">Descrição do produto</h3>
             <button id="buttonDesc">Mostrar Informações</button>
+            <div class="nunito">
             <div id="esconderDesc" class="esconder"> 
                 <p>O estilo descontraído e vibrante com nosso macacão curto verde com estampas
                 coloridas. Feito com tecido leve e respirável, este macacão é perfeito para dias ensolarados e aventuras
@@ -315,9 +327,10 @@
                 <p>Tamanhos Disponíveis: P, M, G</p>
                 <P>Material: 100% poliéster</P>
             </div>
-            <h3>Tabela de Medidas</h3>
+            </div>
+            <h3 class="nunito">Tabela de Medidas</h3>
             <button id="buttonMedidas">Mostrar Informações</button>
-
+<div class="nunito">
             <div id="esconderMedidas" class="esconder">
 
 
@@ -330,19 +343,19 @@
                     </tr>
 
                     <tr>
-                        <td>P</td>
+                        <td class="oswald">P</td>
                         <td>80cm - 84cm</td>
                         <td>64cm - 68cm</td>
                         <td>88cm - 92cm</td>
                     </tr>
                     <tr>
-                        <td>M</td>
+                        <td class="oswald">M</td>
                         <td>85cm - 89cm</td>
                         <td>69cm - 73cm</td>
                         <td>93cm - 97cm</td>
                     </tr>
                     <tr>
-                        <td>G</td>
+                        <td class="oswald">G</td>
                         <td>90cm - 94cm</td>
                         <td>74cm - 78cm</td>
                         <td>98cm - 102cm</td>
@@ -350,21 +363,22 @@
 
                 </table>
             </div>
+            </div>
             <h3> </h3>
 
-            <button> Adicionar a sacola</button>
+            <button class="nunito"> Adicionar a sacola</button>
             <h3> </h3>
-
+<div class="nunito">
             <c class="ConsultarFrete"> Consulte seu frete</c>
             <div id="consultar-frete">
 
 
                 <input type="text" id="cep" placeholder="Digite seu CEP">
 
-                <button> Ok</button>
+                <button class="oswald"> Ok</button>
             </div>
-
-            <button onclick="naoSeiCep()"> Não sei meu CEP</button>
+</div>
+            <button class="oswald"  onclick="naoSeiCep()"> Não sei meu CEP</button>
             <script>
                 function naoSeiCep() {
                     this.window.location.href = "https://www.google.com/maps";
