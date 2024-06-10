@@ -15,12 +15,15 @@
 
   <link rel="stylesheet" href="./css/scrollbar.css">
   <link rel="stylesheet" href="./css/popup.css">
+  <link rel="stylesheet" href="./css/acessibilidade.css">
 
   <script src="./js/menu.js" defer></script>
   <script src="./js/popup.js" defer></script>
+  <script src="./js/acessibilidade.js" defer></script>
 
   <style>
     body {
+      font-family: 'Nunito';
       margin: 0;
     }
 
@@ -61,7 +64,6 @@
       justify-content: left;
       margin: 20px 0 0 20px;
       align-items: center;
-      font-family: 'Questrial', sans-serif;
     }
 
     .cabecalho {
@@ -95,10 +97,9 @@
       flex-wrap: wrap;
       gap: 5px;
       flex-direction: row;
-      margin: 0 ;
+      margin: 0;
       text-decoration: none;
       margin-right: 20px;
-      font-family: 'Questrial', sans-serif;
     }
 
     /* Estilizando a barra de pesquisa */
@@ -130,7 +131,6 @@
       z-index: 1000;
       text-align: left;
       justify-content: center;
-      font-family: 'Questrial', sans-serif;
     }
 
     .menu>ul {
@@ -151,7 +151,7 @@
     }
 
     .menu>ul>li>a:hover {
-      background-color: rgb(241, 241, 241)  ;
+      background-color: rgb(241, 241, 241);
     }
 
     .header-banner {
@@ -171,13 +171,11 @@
       justify-content: center;
       align-items: center;
       font-size: 15px;
-      font-family: 'Questrial', sans-serif;
     }
 
     .header-banner>p>a {
       text-decoration: none;
       color: black;
-      font-family: 'Cardo', sans-serif;
       margin-left: 4px;
     }
 
@@ -228,7 +226,6 @@
       padding: 10px;
       width: 105px;
       border-radius: 0;
-      font-family: 'Nunito', sans-serif;
       font-size: 12px;
     }
 
@@ -268,14 +265,12 @@
 
     .descricao {
       text-align: center;
-      font-family: 'Questrial', sans-serif;
       margin: 0;
       padding: 5px;
     }
 
     .preco {
       text-align: center;
-      font-family: 'Questrial', sans-serif;
       font-size: 20px;
       margin: 0;
     }
@@ -304,7 +299,6 @@
       width: 100%;
       margin-top: 100px;
       background-image: linear-gradient(to right, #ffa142dc, #fffc3083);
-      font-family: 'Alice', sans-serif;
       border-top: 3px solid black;
     }
 
@@ -365,7 +359,7 @@
 
 <body>
   <header>
-    <div class="alinhar-topo">
+    <div id="alinhar-topo">
       <div class="topo">
         <div>
           <a href="tel:5562981531797" class="telefone" tabindex="0"><img src="./src/icones/telefone.png" alt="telefone" class="icones">(62)98153-1797</a>
@@ -425,11 +419,11 @@
   <main>
     <div id="popupMenu" class="popup">
       <div class="popup-content">
-          <span class="close-btn">&times;</span>
-          <h2>Bem-vindo ao site do Lança Caju!</h2>
-          <p>Esse site tem suporte de acessibilidade para Daltonismo, Dislexia e Cegueira.</p>
+        <span class="close-btn">&times;</span>
+        <h2>Bem-vindo ao site do Lança Caju!</h2>
+        <p>Esse site tem suporte de acessibilidade para Daltonismo, Dislexia e Cegueira.</p>
       </div>
-  </div>
+    </div>
     <div class="main-lista-roupas">
       <ul class="listagem-roupas">
         <li class="cartao-produto" tabindex="0">

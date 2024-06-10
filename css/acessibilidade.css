@@ -1,0 +1,12 @@
+@font-face {
+    font-family: Lexie;
+    src: url(/src/fonte/LexieReadable-Regular.ttf);
+}
+
+.font-custom {
+    font-family: 'Lexie';
+}
+
+.alt-tamanho {
+    font-size: 15px;
+}
