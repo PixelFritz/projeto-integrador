@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacola de Compras</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.promo {
+    background-color: #ffcc00;
+    padding: 10px;
+    text-align: center;
+}
+
+.promo span {
+    font-style: italic;
+}
+
+.top-bar {
+    background-color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.top-bar p {
+    margin: 0;
+}
+
+.menu {
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.menu li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    background-color: #fff;
+    width: 80%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: grid;
+    grid-template-areas: 
+        "sacola-vazia"
+        "sugestoes"
+        "sacola-com-item";
+    gap: 20px;
+}
+
+.sacola-vazia {
+    grid-area: sacola-vazia;
+    text-align: center;
+}
+
+.sugestoes {
+    grid-area: sugestoes;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.sugestoes .produto {
+    flex: 1 1 calc(50% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+.sacola-com-item {
+    grid-area: sacola-com-item;
+}
+
+.frete {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.produto-sacola {
+    padding: 10px 0;
+}
+
+.produto-sacola p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="promo">FRETE GRÁTIS a partir de R$199,90 em compras. <span>*Veja condições.</span></div>
+        <div class="top-bar">
+            <p>Seja bem vindo(a)! <a href="#">Entre ou cadastre-se</a></p>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#">NOVIDADES</a>
+                    <a href="#">VESTIDO</a>
+                    <a href="#">CALÇA</a>
+                    <a href="#">CROPPED</a>
+                    <a href="#">MACACÃO</a>
+                    <a href="#">SHORT</a>
+                    <a href="#">CAMISA</a>
+                    <a href="#">T-SHIRT</a>
+                    <a href="#">CONJUNTO</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sacola-vazia">
+            <h2>Sua sacola está vazia</h2>
+            <p>Que tal conferir roupas incríveis da nossa loja?</p>
+        </section>
+
+        <section class="sugestoes">
+            <h3>SUGESTÕES PARA VOCÊ</h3>
+            <div class="produto">
+                <h4>Vestido Vermelho</h4>
+                <p>Palmeira | Lança Caju</p>
+                <span>R$270,00</span>
+            </div>
+            <div class="produto">
+                <h4>Pantalona + Cropped</h4>
+                <p>Morcego | Lança Caju</p>
+                <span>R$350,00</span>
+            </div>
+            <div class="produto">
+                <h4>Macacão Azul</h4>
+                <p>Abacaxi | Lança Caju</p>
+                <span>R$330,00</span>
+            </div>
+            <div class="produto">
+                <h4>Macacão Flor De Caju</h4>
+                <p>Lança Caju</p>
+                <span>R$230,00</span>
+            </div>
+        </section>
+
+        <section class="sacola-com-item">
+            <h2>Sacola (1 item)</h2>
+            <button class="continue">Continuar Comprando</button>
+            <div class="produto-sacola">
+                <p>Macacão Flor De Caju | Lança Caju <span>R$ 230,00</span></p>
+            </div>
+            <div class="frete">
+                <h3>Estime frete e prazo</h3>
+                <input type="text" placeholder="Digite seu CEP">
+                <button>OK</button>
+                <p><a href="#">Não sei meu CEP</a></p>
+                <p>Normal (até 6 dias úteis) <span>Grátis</span></p>
+            </div>
+            <div class="subtotal">
+                <p>Subtotal <span>R$ 230,00</span></p>
+                <button>FINALIZAR COMPRA</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Meios de Pagamento</p>
+    </footer>
+</body>
+</html>
