@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const popupMenu = document.getElementById('popupMenu');
     const closeBtn = document.querySelector('.close-btn');
-    const popupDelay = 10 * 1000; // Tempo em milissegundos (2 horas neste exemplo)
+    const popupDelay = 1000 * 60 * 60 * 2; // Tempo em milissegundos (2 horas neste exemplo)
 
     // Função para mostrar o pop-up
     function showPopup() {

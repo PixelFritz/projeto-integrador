@@ -1,0 +1,89 @@
+.modo-escuro body {
+    background-color: #1f1f1f;
+    color: #fffc30;
+}
+
+.modo-escuro p {
+    color: #fffc30;
+}
+
+.modo-escuro a {
+    color: #fffc30;
+}
+
+.modo-escuro header a {
+    text-decoration: underline;
+    color: #fffc30;
+}
+
+.modo-escuro a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.modo-escuro .header-banner {
+    background-image: linear-gradient(to right, #fffd81, #fffed5);
+}
+
+.modo-escuro .header-banner p {
+    color: #000000;
+}
+
+.modo-escuro .header-banner a {
+    text-decoration: underline;
+    color: #000000;
+}
+
+.modo-escuro .header-banner a:hover {
+    text-decoration: underline;
+    color: #0000ff;
+}
+
+.modo-escuro nav ul li a {
+    background-color: #1f1f1f;
+}
+
+.modo-escuro nav ul li a:hover {
+    text-decoration: underline #fff 3px;
+}
+
+.modo-escuro .menu a {
+    background-color: #494949;
+    color: #fffc30;
+}
+
+.modo-escuro .menu a:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.modo-escuro {
+    background-color: #1f1f1f; 
+}
+
+.modo-escuro .cartao-produto:hover {
+    background-color: #494949;
+}
+
+.modo-escuro .footer {
+    background-image: linear-gradient(to right, #fffc30, #fffead);
+    color: black;
+}
+
+.modo-escuro .footer a {
+    text-decoration: underline;
+    color: black;
+}
+
+.modo-escuro .footer a:hover {
+    color: #0000ff;
+}
+
+.modo-escuro .footer-diferente {
+    background-color: #1f1f1f;
+    color: #fffc30;
+}
+
+.modo-escuro .blank {
+    background-image: linear-gradient(to right, #fffc30, #fffead);
+}
