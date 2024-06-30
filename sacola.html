@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="css/sacola.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alice&amp;family=Arimo:ital,wght@0,400..700;1,400..700&amp;family=Cardo:ital,wght@0,400;0,700;1,400&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;family=Questrial&amp;display=swap">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sacola de Compras</title>
@@ -15,11 +17,7 @@ body {
     align-items: center;
 }
 
-header {
-    background-color: #fff;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+
 
 .promo {
     background-color: #ffcc00;
@@ -31,15 +29,7 @@ header {
     font-style: italic;
 }
 
-.top-bar {
-    background-color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
 
-.top-bar p {
-    margin: 0;
-}
 
 .menu {
     background-color: #fff;
@@ -66,9 +56,7 @@ header {
 }
 
 main {
-    background-color: #fff;
     width: 80%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     display: grid;
     grid-template-areas: 
@@ -76,15 +64,13 @@ main {
         "sugestoes"
         "sacola-com-item";
     gap: 20px;
+    width: 945px;
 }
 
-.sacola-vazia {
-    grid-area: sacola-vazia;
-    text-align: center;
-}
+
 
 .sugestoes {
-    grid-area: sugestoes;
+    
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -100,11 +86,14 @@ main {
 
 .sacola-com-item {
     grid-area: sacola-com-item;
+    display: flex;
+    flex-direction: row;
+    background-color: #f8f8f8;
+    width: 945px;
+
 }
 
 .frete {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
     padding: 10px 0;
 }
 
@@ -117,95 +106,181 @@ main {
     justify-content: space-between;
 }
 
-.subtotal {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
-}
 
-footer {
-    background-color: #fff;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
 
+ 
+    
     </style>
 </head>
 <body>
     <header>
-        <div class="promo">FRETE GRÁTIS a partir de R$199,90 em compras. <span>*Veja condições.</span></div>
-        <div class="top-bar">
-            <p>Seja bem vindo(a)! <a href="#">Entre ou cadastre-se</a></p>
+        <div class="alinhar-topo">
+            <div class="topo">
+                <div>
+                    <a href="tel:5562981531797" class="telefone" tabindex="0"><img src="./src/icons/telefone.png"
+                            alt="telefone" class="icones">(62)98153-1797</a>
+                </div>
+                <div>
+                    <a href="index.html" class="cabecalho" tabindex="0">
+                        <img src="./src/imagens/Marca.png" alt="Marca Lança Caju" width="150px">
+                    </a>
+                </div>
+                <div class="icone-login-pesquisa">
+                    <!-- Barra de pesquisa -->
+                    <input type="text" class="search-bar" placeholder="Pesquisar" tabindex="0">
+                    <p class="login">Seja bem-vindo(a)!<a href="login.html" tabindex="0">Entre ou cadastre-se</a></p>
+                    <a href="#" class="header-links"><img src="./src/icons/perfil.png" alt="P" class="icones"></a>
+                    <a href="#" class="header-links"><img src="./src/icons/favoritos.png" alt="F" class="icones"></a>
+                    <a href="#" class="header-links"><img src="./src/icons/sacola (1).png" alt="C" class="icones"></a>
+                    <a href="#" class="header-links"><img src="./src/icons/acessibilidade2.png" alt="A" class="icones"
+                            id="menuAcessibilidade"></a>
+                    <div id="menu" class="menu">
+                        <ul>
+                            <li><a href="#" id="daltonismo">Daltonismo</a></li>
+                            <li><a href="#" id="dislexia">Dislexia</a></li>
+                            <li><a href="#" id="narrador">Narrador de Voz</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <nav class="menu">
-            <ul>
-                <li>
-                    <a href="#">NOVIDADES</a>
-                    <a href="#">VESTIDO</a>
-                    <a href="#">CALÇA</a>
-                    <a href="#">CROPPED</a>
-                    <a href="#">MACACÃO</a>
-                    <a href="#">SHORT</a>
-                    <a href="#">CAMISA</a>
-                    <a href="#">T-SHIRT</a>
-                    <a href="#">CONJUNTO</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="faixa">
+            <p class="nunito">FRETE GRÁTIS a partir de R$ 199,90 em compras<a href="#">*Veja condições</a></p>
+        </div>
     </header>
+    <nav>
+        <ul>
+            <li>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">NOVIDADES</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CAMISA</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CROPPED</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CONJUNTO</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">MACACÃO</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">SHORT</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">T-SHIRT</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">VESTIDO</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="faixa-2">
+        <br>
+    </div>
+
+    
 
     <main>
+        
+        
+        <h6>Sacola(0 itens)</h6>
+
+        <div>
         <section class="sacola-vazia">
+              
+            
+            <img src="/src/icons/sacola.png" alt="" width="70px">
             <h2>Sua sacola está vazia</h2>
             <p>Que tal conferir roupas incríveis da nossa loja?</p>
-        </section>
+        
 
-        <section class="sugestoes">
+        <div class="sugestoes">
             <h3>SUGESTÕES PARA VOCÊ</h3>
+            </div>
             <div class="produto">
+                
+                <div>
+                    <img src="/src/imagens/vestido-vermelho.png" alt="" width="100px" height="157px">
                 <h4>Vestido Vermelho</h4>
                 <p>Palmeira | Lança Caju</p>
                 <span>R$270,00</span>
-            </div>
-            <div class="produto">
+                </div>
+            <div>
+                <img src="/src/imagens/pantalona+cropped.png" alt="" width="100px" height="157px">
                 <h4>Pantalona + Cropped</h4>
                 <p>Morcego | Lança Caju</p>
                 <span>R$350,00</span>
             </div>
-            <div class="produto">
+            <div>
+                <img src="/src/imagens/macacão-azul.png" alt="" width="100px" height="157px">
                 <h4>Macacão Azul</h4>
                 <p>Abacaxi | Lança Caju</p>
                 <span>R$330,00</span>
             </div>
-            <div class="produto">
-                <h4>Macacão Flor De Caju</h4>
+            <div>
+                <img src="/src/imagens/macacão-flor-de-caju.png" alt="" width="100px" height="157px">
+                <h4>Macacão Flor De Caju</h4> 
                 <p>Lança Caju</p>
                 <span>R$230,00</span>
             </div>
+            </div>
         </section>
 
+      
         <section class="sacola-com-item">
-            <h2>Sacola (1 item)</h2>
-            <button class="continue">Continuar Comprando</button>
-            <div class="produto-sacola">
-                <p>Macacão Flor De Caju | Lança Caju <span>R$ 230,00</span></p>
+          <div class="posicaodiv">
+            <div>
+                <p>Sacola(1 item)</p>
             </div>
             <div class="frete">
-                <h3>Estime frete e prazo</h3>
-                <input type="text" placeholder="Digite seu CEP">
-                <button>OK</button>
-                <p><a href="#">Não sei meu CEP</a></p>
-                <p>Normal (até 6 dias úteis) <span>Grátis</span></p>
+                <p>Estime frete e prazo</p>
+                <input  class="cep2" type="text" placeholder="  Digite seu CEP">
+                <button class="ok2">OK</button>
+
+                <p><a class="ncep" href="#">Não sei meu CEP</a></p>
+                
+                <p class="fretegratis">Normal (até 6 dias úteis) <span class="separagratis">Grátis</span></p>
+
             </div>
-            <div class="subtotal">
-                <p>Subtotal <span>R$ 230,00</span></p>
-                <button>FINALIZAR COMPRA</button>
+            
+                <div class="textosprod">
+                <p class="infoprod">Produto</p> 
+                <p class="infoprod">Quantidade</p> 
+                <p class="infoprod">Preço</p>
+                </div>
+                <div class="prodf">
+                    <div>
+                        <img src="/src/imagens/macacão-flor-de-caju.png" class="img"> 
+                    </div>
+                    <div>
+                        <p class="infoprod">Macacão Flor de Caju | Lança Caju</p>
+                    </div>
+
+                    <div class="quantidaD">
+                    <select name="quant" id="quantidade">
+                        <option value="" selected>Quantidade</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    </div>
+                    <div class="preço">
+                        <p>R$ 230,00</p>
+                    </div>
+                    
+                </div>
+          </div>     
+         <div class="segundadiv">
+          <div class="posicaodiv2">
+            <div class="finalizar">             
+                <h2 class="tam-font">Sacola (1 item)</h2>
+                <div class="subtotal">
+                    <p>Subtotal <span> R$ 230,00</span></p>
+                    <button class="fcompra">FINALIZAR</button>
+                </div>
+                <br>
+                <a class="continue" href="#">Continuar comprando > </a>
             </div>
-        </section>
+         </div>   
+        </section>  
     </main>
 
     <footer>
