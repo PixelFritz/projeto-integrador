@@ -1,123 +1,658 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <link rel="shortcut icon" href="src/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/sacola.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alice&amp;family=Arimo:ital,wght@0,400..700;1,400..700&amp;family=Cardo:ital,wght@0,400;0,700;1,400&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;family=Questrial&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Alice&amp;family=Arimo:ital,wght@0,400..700;1,400..700&amp;family=Cardo:ital,wght@0,400;0,700;1,400&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;family=Questrial&amp;display=swap">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sacola de Compras</title>
+    <script src="js/carrinho.js" defer></script>
     <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .promo {
+            background-color: #ffcc00;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .promo span {
+            font-style: italic;
+        }
+
+        .menu {
+            background-color: #fff;
+            padding: 10px 0;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .menu li {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+            gap: 20px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+        }
+
+        .semProduto .sugestoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .semProduto .sugestoes .produto {
+            flex: 1 1 calc(50% - 20px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .sacola-com-item {
+            display: flex;
+            flex-direction: row;
+            background-color: #f8f8f8;
+            margin-top: 10px;
+            justify-content: space-between;
+        }
+
+        .segundadiv {
+            width: 400px;
+        }
+
+        .frete {
+            padding: 10px 0;
+        }
+
+        .produto-sacola {
+            padding: 10px 0;
+        }
+
+        .produto-sacola p {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .produto {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 5px;
+            font-size: 10px;
+        }
+
+        .sacola-vazia {
+            text-align: center;
+            padding-top: 100px;
+            margin: auto;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        header {
+            margin: 0;
+        }
+
+        .alinhar-topo {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .topo {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .topo {
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            justify-content: space-between;
+        }
+
+        .icones {
+            width: 30px;
+            height: 30px;
+            padding: 3px;
+        }
+
+        .telefone {
+            text-decoration: none;
+            color: black;
+            display: flex;
+            width: 173px;
+            justify-content: left;
+            margin: 20px 0 0 20px;
+            align-items: center;
+            font-family: 'Questrial', sans-serif;
+        }
+
+        .cabecalho {
+            padding: 5px;
+            width: 200px;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            margin-left: 350px;
+        }
+
+        .login {
+            display: grid;
+            height: 15px;
+            color: black;
+            justify-content: center;
+        }
+
+        .login>a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .login>a:hover {
+            text-decoration: underline;
+            color: #5271FF;
+        }
+
+        .icone-login-pesquisa {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            flex-direction: row;
+            margin: 0;
+            text-decoration: none;
+            margin-right: 20px;
+            font-family: 'Questrial', sans-serif;
+        }
+
+        .search-bar {
+            width: 180px;
+            height: 5px;
+            padding: 15px;
+            margin: 0;
+            border: solid rgba(0, 0, 0, 0.596) 2px;
+            border-radius: 50px;
+            margin-top: 16px;
+        }
+
+        .header-links {
+            margin-top: 15px;
+            height: 36px;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 5px;
+            width: 150px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            text-align: left;
+            justify-content: center;
+            font-family: 'Questrial', sans-serif;
+        }
+
+        .menu>ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu>ul>li {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .menu>ul>li>a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .menu>ul>li>a:hover {
+            background-color: rgb(241, 241, 241);
+        }
+
+        .faixa {
+            display: block;
+            height: 25px;
+            background-image: linear-gradient(to right, #fffc3083, #FDFDFD);
+            width: 945px;
+            margin: auto;
+            padding: 0;
+            margin-top: 30px;
+        }
+
+        .faixa>p {
+            margin: 0;
+            padding: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            font-family: 'Questrial', sans-serif;
+        }
+
+        .faixa>p>a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Cardo', sans-serif;
+            margin-left: 4px;
+        }
+
+        .faixa-2 {
+            display: block;
+            height: 25px;
+            background-image: linear-gradient(to right, #FDFDFD, #fffc3083);
+            width: 945px;
+            margin: auto;
+            padding: 0;
+        }
+
+        nav {
+            width: 945px;
+            margin: auto;
+        }
+
+        nav>ul>li>a:hover {
+            cursor: pointer;
+            text-decoration: underline rgba(0, 0, 0, 0.384) 3px;
+        }
+
+        nav>ul {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        nav>ul>li {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        nav>ul>li>a {
+            display: block;
+            color: black;
+            text-decoration-line: none;
+            margin: 0;
+            background-color: white;
+            padding: 10px;
+            width: 105px;
+            border-radius: 0;
+            font-family: 'Nunito', sans-serif;
+            font-size: 12px;
+        }
+
+        .esconder {
+            display: none;
+        }
+
+        .nunito {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .oswald {
+            font-family: 'Oswald';
+        }
+
+        .textosprod {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            gap: 200px;
+        }
+
+
+        .prodf {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 10px;
+            font-size: 12px;
+            align-items: center;
+        }
+
+        .prodf img {
+            width: 50px;
+            border: #ccc;
+            border-radius: 5px;
+        }
+
+        .cartao-sacola {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .separar {
+            position: relative;
+            width: 700px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .quantidaD {
+            position: absolute;
+            left: 264.05px;
+            margin: 10px;
+        }
+
+        .preco {
+            position: absolute;
+            left: 551.46px;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .remove-button {
+            height: 23px;
+            width: 80px;
+            border-radius: 5px;
+            border: none;
+            background-color: #b9bab4;
+        }
+
+        .remove-button:hover {
+            cursor: pointer;
+            background-color: #4d4d4b;
+            color: white;
+        }
+
+        .product {
+            margin: 10px 0 10px 0;
+        }
+
+        .cep2 {
+            border-radius: 50px;
+            height: 23px;
+            border-color: #b9bab4;
+
+        }
+
+        .ok2 {
+            border-radius: 5px;
+            height: 23px;
+            border-color: #b9bab4;
+
+        }
+
+        .nunito {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .oswald {
+            font-family: 'Oswald';
+        }
+
+        .subtotal {
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .subtotal h1 {
+            font-weight: bold;
+            font-size: 25px;
+            word-spacing: 20px;
+        }
+
+
+        footer {
+            background-color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            width: 945px;
+        }
+
+        .finalizar {
+            display: inline-block;
+            border: solid #b9bab4;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            background-color: #fff;
+
+        }
+
+        a.continue {
+            text-decoration: none;
+            color: black;
+        }
+
+        a.continue:hover {
+            text-decoration: underline;
+            color: #5271ff;
+        }
+
+        .fcompra {
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px;
+            background-color: #b9bab4;
+            border: none;
+        }
+
+        .fcompra:hover {
+            background-color: #4d4d4b;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .fretegratis {
+            border-radius: 10px;
+            border: solid #b9bab4;
+            width: 300px;
+            padding: 5px;
+        }
+
+        .posicaodiv {
+            width: 720px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+
+        .separagratis {
+            margin-left: 70px;
+        }
+
+        .ncep {
+            text-decoration: none;
+            color: black;
+        }
+
+        .ncep:hover {
+            text-decoration: underline;
+            color: blue;
+
+        }
+
+        .cep2 {
+            padding: 3px;
+        }
+
+        .sacola-vazia {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 10px;
+            padding-bottom: 20px;
+            width: 945px;
+        }
+
+        .frete {
+            margin-bottom: 40px;
+        }
+
+        .segundadiv {
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        .infoprod {
+            font-size: 14px;
+            max-width: 190px;
+            margin: 10px;
+            align-content: center;
+        }
+
+        .quant {
+            width: 35px;
+            padding: 5px;
+            font-size: 12px;
+            color: #000;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .quant::after {
+            content: '\25BC';
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .quant option {
+            padding: 10px;
+            background-color: #fff;
+            color: #333;
+        }
 
 
 
-.promo {
-    background-color: #ffcc00;
-    padding: 10px;
-    text-align: center;
-}
+        li {
+            list-style: none;
+        }
 
-.promo span {
-    font-style: italic;
-}
+        .footer {
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0px;
+            justify-content: space-between;
+            background-color: antiquewhite;
+            width: 100%;
+            margin-top: 100px;
+            background-image: linear-gradient(to right, #ffa142dc, #fffc3083);
+            border-top: 3px solid black;
+        }
 
+        .footer-main-div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+            margin: 10px 150px 10px 150px;
+            padding: 5px;
+            justify-content: space-between;
+        }
 
+        .footer-secoes {
+            display: flex;
+            flex-direction: column;
+            width: 230px;
+            justify-content: first baseline;
+            margin: 10px;
+            padding: 10px;
+        }
 
-.menu {
-    background-color: #fff;
-    padding: 10px 0;
-}
+        .footer-secoes .links a {
+            text-decoration: none;
+            color: #000;
+        }
 
-.menu ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
+        .footer-secoes .links a:hover {
+            text-decoration: underline;
+            color: #5271ff;
+        }
 
-.menu li {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
+        .footer-diferente {
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+            width: 100%;
+            border-top: 3px solid black;
+        }
 
-.menu a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
+        .footer-secoes-2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 5px 150px 5px 150px;
+            padding: 10px;
+        }
 
-main {
-    width: 80%;
-    padding: 20px;
-    display: grid;
-    grid-template-areas: 
-        "sacola-vazia"
-        "sugestoes"
-        "sacola-com-item";
-    gap: 20px;
-    width: 945px;
-}
+        .titulos {
+            font-size: 18px;
+            margin: 5px;
+            padding: 3px;
+        }
 
-
-
-.sugestoes {
-    
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-}
-
-.sugestoes .produto {
-    flex: 1 1 calc(50% - 20px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    text-align: center;
-}
-
-.sacola-com-item {
-    grid-area: sacola-com-item;
-    display: flex;
-    flex-direction: row;
-    background-color: #f8f8f8;
-    width: 945px;
-
-}
-
-.frete {
-    padding: 10px 0;
-}
-
-.produto-sacola {
-    padding: 10px 0;
-}
-
-.produto-sacola p {
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
- 
-    
+        .blank {
+            display: flex;
+            width: 100%;
+            height: 100px;
+            background-image: linear-gradient(to right, #ffa142dc, #fffc3083);
+            border-top: 3px solid black;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <div class="alinhar-topo">
             <div class="topo">
                 <div>
-                    <a href="tel:5562981531797" class="telefone" tabindex="0"><img src="./src/icons/telefone.png"
+                    <a href="tel:5562981531797" class="telefone" tabindex="0"><img src="./src/icones/telefone.png"
                             alt="telefone" class="icones">(62)98153-1797</a>
                 </div>
                 <div>
@@ -129,10 +664,10 @@ main {
                     <!-- Barra de pesquisa -->
                     <input type="text" class="search-bar" placeholder="Pesquisar" tabindex="0">
                     <p class="login">Seja bem-vindo(a)!<a href="login.html" tabindex="0">Entre ou cadastre-se</a></p>
-                    <a href="#" class="header-links"><img src="./src/icons/perfil.png" alt="P" class="icones"></a>
-                    <a href="#" class="header-links"><img src="./src/icons/favoritos.png" alt="F" class="icones"></a>
-                    <a href="#" class="header-links"><img src="./src/icons/sacola (1).png" alt="C" class="icones"></a>
-                    <a href="#" class="header-links"><img src="./src/icons/acessibilidade2.png" alt="A" class="icones"
+                    <a href="#" class="header-links"><img src="./src/icones/perfil.png" alt="P" class="icones"></a>
+                    <a href="#" class="header-links"><img src="./src/icones/favoritos.png" alt="F" class="icones"></a>
+                    <a href="#" class="header-links"><img src="./src/icones/sacola.png" alt="C" class="icones"></a>
+                    <a href="#" class="header-links"><img src="./src/icones/acessibilidade2.png" alt="A" class="icones"
                             id="menuAcessibilidade"></a>
                     <div id="menu" class="menu">
                         <ul>
@@ -174,117 +709,141 @@ main {
         <br>
     </div>
 
-    
+
 
     <main>
-        
-        
-        <h6>Sacola(0 itens)</h6>
-
         <div>
-        <section class="sacola-vazia">
-              
-            
-            <img src="/src/icons/sacola.png" alt="" width="70px">
-            <h2>Sua sacola está vazia</h2>
-            <p>Que tal conferir roupas incríveis da nossa loja?</p>
-        
-
-        <div class="sugestoes">
-            <h3>SUGESTÕES PARA VOCÊ</h3>
-            </div>
-            <div class="produto">
-                
-                <div>
-                    <img src="/src/imagens/vestido-vermelho.png" alt="" width="100px" height="157px">
-                <h4>Vestido Vermelho</h4>
-                <p>Palmeira | Lança Caju</p>
-                <span>R$270,00</span>
-                </div>
-            <div>
-                <img src="/src/imagens/pantalona+cropped.png" alt="" width="100px" height="157px">
-                <h4>Pantalona + Cropped</h4>
-                <p>Morcego | Lança Caju</p>
-                <span>R$350,00</span>
-            </div>
-            <div>
-                <img src="/src/imagens/macacão-azul.png" alt="" width="100px" height="157px">
-                <h4>Macacão Azul</h4>
-                <p>Abacaxi | Lança Caju</p>
-                <span>R$330,00</span>
-            </div>
-            <div>
-                <img src="/src/imagens/macacão-flor-de-caju.png" alt="" width="100px" height="157px">
-                <h4>Macacão Flor De Caju</h4> 
-                <p>Lança Caju</p>
-                <span>R$230,00</span>
-            </div>
-            </div>
-        </section>
-
-      
-        <section class="sacola-com-item">
-          <div class="posicaodiv">
-            <div>
-                <p>Sacola(1 item)</p>
-            </div>
-            <div class="frete">
-                <p>Estime frete e prazo</p>
-                <input  class="cep2" type="text" placeholder="  Digite seu CEP">
-                <button class="ok2">OK</button>
-
-                <p><a class="ncep" href="#">Não sei meu CEP</a></p>
-                
-                <p class="fretegratis">Normal (até 6 dias úteis) <span class="separagratis">Grátis</span></p>
-
-            </div>
-            
-                <div class="textosprod">
-                <p class="infoprod">Produto</p> 
-                <p class="infoprod">Quantidade</p> 
-                <p class="infoprod">Preço</p>
-                </div>
-                <div class="prodf">
-                    <div>
-                        <img src="/src/imagens/macacão-flor-de-caju.png" class="img"> 
+            <div class="contProduto" id="contProduto"></div>
+            <div class="semProduto" id="semProduto">
+                <section class="sacola-vazia">
+                    <img src="/src/icones/sacola.png" alt="" width="70px">
+                    <h2>Sua sacola está vazia</h2>
+                    <p>Que tal conferir roupas incríveis da nossa loja?</p>
+                    <br><br><br><br>
+                    <div class="sugestoes">
+                        <h3>SUGESTÕES PARA VOCÊ</h3>
                     </div>
-                    <div>
-                        <p class="infoprod">Macacão Flor de Caju | Lança Caju</p>
-                    </div>
+                    <div class="produto">
 
-                    <div class="quantidaD">
-                    <select name="quant" id="quantidade">
-                        <option value="" selected>Quantidade</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
+                        <div>
+                            <img src="/src/imagens/roupas/vestido-vermelho.png" alt="" width="100px" height="157px">
+                            <h4>Vestido Vermelho</h4>
+                            <p>Palmeira | Lança Caju</p>
+                            <span>R$270,00</span>
+                        </div>
+                        <div>
+                            <img src="/src/imagens/roupas/pantalona+cropped.png" alt="" width="100px" height="157px">
+                            <h4>Pantalona + Cropped</h4>
+                            <p>Morcego | Lança Caju</p>
+                            <span>R$350,00</span>
+                        </div>
+                        <div>
+                            <img src="/src/imagens/roupas/macacao-azul.png" alt="" width="100px" height="157px">
+                            <h4>Macacão Azul</h4>
+                            <p>Abacaxi | Lança Caju</p>
+                            <span>R$330,00</span>
+                        </div>
+                        <div>
+                            <img src="/src/imagens/roupas/macacao-flor-de-caju.png" alt="" width="100px" height="157px">
+                            <h4>Macacão Flor De Caju</h4>
+                            <p>Lança Caju</p>
+                            <span>R$230,00</span>
+                        </div>
                     </div>
-                    <div class="preço">
-                        <p>R$ 230,00</p>
-                    </div>
-                    
-                </div>
-          </div>     
-         <div class="segundadiv">
-          <div class="posicaodiv2">
-            <div class="finalizar">             
-                <h2 class="tam-font">Sacola (1 item)</h2>
-                <div class="subtotal">
-                    <p>Subtotal <span> R$ 230,00</span></p>
-                    <button class="fcompra">FINALIZAR</button>
-                </div>
-                <br>
-                <a class="continue" href="#">Continuar comprando > </a>
+                </section>
             </div>
-         </div>   
-        </section>  
+
+            <div class="comProduto" id="comProduto">
+                <section class="sacola-com-item">
+                    <div class="posicaodiv">
+                        <div class="frete">
+                            <p>Estime frete e prazo</p>
+                            <input class="cep2" type="text" placeholder="  Digite seu CEP">
+                            <button class="ok2">OK</button>
+
+                            <p><a class="ncep" href="#">Não sei meu CEP</a></p>
+
+                            <p class="fretegratis">Normal (até 6 dias úteis) <span class="separagratis">Grátis</span>
+                            </p>
+                        </div>
+
+                        <div class="textosprod">
+                            <p class="infoprod" id="prod">Produto</p>
+                            <p class="infoprod" id="qtde">Quantidade</p>
+                            <p class="infoprod" id="preco">Preço</p>
+                        </div>
+                        <div class="prodf" id="prodf">
+                        </div>
+                    </div>
+                    <div class="segundadiv">
+                        <div class="posicaodiv2">
+                            <div class="finalizar">
+                                <div class="subtotal">
+                                    <h1 id="total"></h1>
+                                    <button class="fcompra">FINALIZAR</button>
+                                </div>
+                                <br>
+                                <a class="continue" href="#">Continuar comprando > </a>
+                            </div>
+                        </div>
+                </section>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <p>Meios de Pagamento</p>
-    </footer>
+    <section class="footer">
+        <div class="footer-main-div">
+            <div class="footer-secoes">
+                <h1 class="titulos">Ajuda</h1>
+                <ul class="links">
+                    <li><a href="#">Atendimento</a></li>
+                    <li><a href="#">Troca e Devolução</a></li>
+                    <li><a href="#">Canal de Denúncias</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-secoes">
+                <h1 class="titulos">Sobre</h1>
+                <ul class="links">
+                    <li><a href="#">A empresa Lança Caju</a></li>
+                    <li><a href="#">Lojistas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-secoes">
+                <h1 class="titulos">Fale Conosco</h1>
+                <ul class="links">
+                    <li><a href="tel:5562981531797">+55 (62)9 8153-1797</a></li>
+                    <li><a href="mailto:lancacaju@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-diferente">
+            <div class="footer-secoes-2">
+                <h1 class="titulos">Formas de Pagamento</h1>
+                <img src="./src/icones/cartoes.png" data-original="./src/icones/cartoes.png"
+                    data-alternative="./src/icones/cartoes-aces.png" class="icones">
+                <img src="./src/icones/pix.png" data-original="./src/icones/pix.png"
+                    data-alternative="./src/icones/pix-aces.png" class="icones">
+            </div>
+
+            <div class="footer-secoes-2">
+                <a href="https://www.instagram.com/lancacaju/"><img src="./src/icones/intagram.png"
+                        data-original="./src/icones/instagram.png" data-alternative="./src/icones/instagram-aces.png"
+                        class="icones"></a>
+                <a href="https://wa.me/message/CWFKIY27JVVXB1"><img src="./src/icones/whatsapp.png"
+                        data-original="./src/icones/whatsapp.png" data-alternative="./src/icones/whatsapp-aces.png"
+                        class="icones"></a>
+                <a href=""><img src="./src/icones/pinterest.png" data-original="./src/icones/pinterest.png"
+                        data-alternative="./src/icones/pinterest-aces.png" class="icones"></a>
+                <a href=""><img src="./src/icones/tiktok.png" data-original="./src/icones/tiktok.png"
+                        data-alternative="./src/icones/tiktok-aces.png" class="icones"></a>
+            </div>
+        </div>
+        <div class="blank">
+            <p></p>
+        </div>
+    </section>
 </body>
+
 </html>

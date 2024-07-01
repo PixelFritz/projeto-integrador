@@ -3,84 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crie sua conta</title> 
+    <title>Crie sua conta</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
-</head>
-<body>
-    <img src="Marca.png" alt="Logo da página">
-</body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./src/favicon/favicon.ico" type="image/x-icon">
     <style>
- body::before {
-            content:"";
-            background-image: url(bg.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            z-index: -1;
-            opacity: 1;
-        }
-        img{ 
-    position: absolute;
-    top: 0;
-    left: 50%; 
-    transform: translateX(-50%); 
-    width: 195px; 
-    height: auto; 
-    z-index: 1000;} 
-    body {
-        font-family: 'Questrial' sans-serif;
-        font-size: 17px;
 
-    }
+        img {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 195px;
+            height: auto;
+            z-index: 1;
+        }
+
         body {
-            
+            background-image: url(src/imagens/bg.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             background-color: #ffffff;
+            font-family: 'Questrial' sans-serif;
+            font-size: 17px;
         }
+
         .container {
-            background:transparent;
+            position: relative;
+            top: 150px;
+            background: transparent;
             padding: 20px;
             border-radius: 8px;
             max-width: 400px;
             width: 100%;
             text-align: center;
         }
+
         .container h1 {
             margin-bottom: 1px;
         }
+
         .form-group {
             margin-bottom: 15px;
             text-align: left;
         }
+
         .form-group label {
-            display: block;
             margin-bottom: 5px;
         }
+
         .form-group input {
-          width: calc(100% - 20px);
-          padding: 10px;
-          border: none; 
-         border-radius: 0; 
-         border-bottom: 2px solid  #a3a3a383; 
-         background: transparent;
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: none;
+            border-radius: 0;
+            border-bottom: 2px solid #a3a3a383;
+            background: transparent;
         }
 
         .form-group input:focus {
-         outline: none;
-            
+            outline: none;
         }
+
         .form-group span {
             font-size: 0.9em;
-        
         }
+
         .form-group button {
             width: 100%;
             padding: 15px;
@@ -91,19 +85,59 @@
             font-size: 1em;
             cursor: pointer;
         }
+
         .form-group button:hover {
             background: #f8f54fde;
         }
+
+        .termos {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #termos {
+            width: 10px;
+            align-self: start;
+            margin: 10px;
+        }
+
+        .termoPrivacidade {
+            width: 360px;
+            padding: 5px;
+            margin: 0;
+        }
+
+        .outra-forma-login {
+            padding: 5px;
+            width: 550px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .centro a {
+            text-decoration: none;
+            color: #000;
+            font-size: 15px;
+        }
+
+        .centro a:hover {
+            text-decoration: underline;
+            color: #5271FF;
+        }
     </style>
 </head>
+
 <body>
+    <a href="index.html" target="_self">
+        <img src="src/imagens/Marca.png" alt="Logo da página">
+    </a>
     <div class="container">
         <h1>Crie sua conta</h1>
-    
+
         <form>
 
             <div class="form-group">
-                <label for="nome">Nome:</label> 
+                <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
             </div>
             <div class="form-group">
@@ -127,15 +161,18 @@
                 <input type="password" id="confirmar-senha" name="confirmar-senha" required>
             </div>
             <div class="form-group">
-                <label>
-                    <span>Li e concordo com os Termos e Condições e estou ciente do tratamento dos meus dados de acordo com a Política de Privacidade</span>
-                    <input type="checkbox" id="termos" name="termos" required>
+                <label class="termos">
+                    <input type="checkbox" id="termos" name="termos" required><p class="termoPrivacidade">Li e concordo com os Termos e Condições e estou ciente do tratamento dos meus dados de acordo com a Política de Privacidade</p>
                 </label>
             </div>
             <div class="form-group">
                 <button type="submit">Finalizar cadastro</button>
             </div>
+            <div>
+                <p class="centro">Já possui uma conta? <a href="login.html">Faça login.</a></p>
+            </div>
         </form>
     </div>
 </body>
+
 </html>

@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/src/favicon/favicon.ico" type="image/x-icon">
+    <title>Pantalona + Cropped Morcego | Lança Caju</title>
+    <script src="/js/descricaoMaximizar.js" defer></script>
+    <script src="/js/menu.js" defer></script>
+    <script src="/js/popup.js" defer></script>
+    <script src="/js/carrinho.js" defer></script>
+    <link rel="stylesheet" href="/css/scrollbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&amp;family=Arimo:ital,wght@0,400..700;1,400..700&amp;family=Cardo:ital,wght@0,400;0,700;1,400&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;family=Questrial&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        header {
+            margin: 0;
+        }
+
+        .alinhar-topo {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .topo {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .topo {
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            justify-content: space-between;
+        }
+
+        .icones {
+            width: 30px;
+            height: 30px;
+            padding: 3px;
+        }
+
+        .telefone {
+            text-decoration: none;
+            color: black;
+            display: flex;
+            width: 173px;
+            justify-content: left;
+            margin: 20px 0 0 20px;
+            align-items: center;
+            font-family: 'Questrial', sans-serif;
+        }
+
+        .cabecalho {
+            padding: 5px;
+            width: 200px;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            margin-left: 350px;
+        }
+
+        .login {
+            display: grid;
+            height: 15px;
+            color: black;
+            justify-content: center;
+        }
+
+        .login>a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .login>a:hover {
+            text-decoration: underline;
+            color: #5271FF;
+        }
+
+        .icone-login-pesquisa {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            flex-direction: row;
+            margin: 0;
+            text-decoration: none;
+            margin-right: 20px;
+            font-family: 'Questrial', sans-serif;
+        }
+
+        .search-bar {
+            width: 188px;
+            height: 5px;
+            padding: 15px;
+            margin: 0;
+            border: solid rgba(0, 0, 0, 0.596) 2px;
+            border-radius: 50px;
+            margin-top: 16px;
+        }
+
+        .header-links {
+            margin-top: 15px;
+            height: 36px;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 5px;
+            width: 150px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            text-align: left;
+            justify-content: center;
+            font-family: 'Questrial', sans-serif;
+        }
+
+        .menu>ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu>ul>li {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .menu>ul>li>a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .menu>ul>li>a:hover {
+            background-color: rgb(241, 241, 241);
+        }
+
+        .faixa {
+            display: block;
+            height: 25px;
+            background-image: linear-gradient(to right, #fffc3083, #FDFDFD);
+            width: 945px;
+            margin: auto;
+            padding: 0;
+            margin-top: 30px;
+        }
+
+        .faixa>p {
+            margin: 0;
+            padding: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            font-family: 'Questrial', sans-serif;
+        }
+
+        .faixa>p>a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Cardo', sans-serif;
+            margin-left: 4px;
+        }
+
+        .faixa-2 {
+            display: block;
+            height: 25px;
+            background-image: linear-gradient(to right, #FDFDFD, #fffc3083);
+            width: 945px;
+            margin: auto;
+            padding: 0;
+        }
+
+        nav {
+            width: 945px;
+            margin: auto;
+        }
+
+        nav>ul>li>a:hover {
+            cursor: pointer;
+            text-decoration: underline rgba(0, 0, 0, 0.384) 3px;
+        }
+
+        nav>ul {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        nav>ul>li {
+            display: inline-flex;
+            width: 100%;
+        }
+
+        nav>ul>li>a {
+            display: block;
+            color: black;
+            text-decoration-line: none;
+            margin: 0;
+            background-color: white;
+            padding: 10px;
+            width: 105px;
+            border-radius: 0;
+            font-family: 'Nunito', sans-serif;
+            font-size: 12px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 945px;
+            margin: auto;
+            justify-content: space-between;
+            margin-top: 35px;
+        }
+
+        .main-img {
+            display: flex;
+            flex-direction: row;
+            margin-left: 50px;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            height: 403.07px;
+            margin-right: 20px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sidebar img {
+            width: 70px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .imgp img {
+            height: 396.07px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            position: static;
+            align-items: top;
+        }
+
+        .desc {
+            flex-direction: column;
+            margin-right: 50px;
+            width: 410px;
+        }
+
+        .corb {
+            cursor: pointer;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: rgb(0, 0, 0) ;
+            margin: 5px;
+        }
+
+        .corb:hover {
+            transform: scale(1.05);
+        }
+
+        .PMG {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .P {
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0%;
+            background-color: white;
+            border: 1px solid black;
+            display: flex;
+            height: 40px;
+            width: 40px;
+            margin: 5px;
+
+        }
+
+        .M {
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0%;
+            background-color: white;
+            border: 1px solid black;
+            display: flex;
+            height: 40px;
+            width: 40px;
+            margin: 5px;
+        }
+
+        .G {
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0%;
+            background-color: white;
+            border: 1px solid black;
+            display: flex;
+            height: 40px;
+            width: 40px;
+            margin: 5px;
+        }
+
+        .P:hover {
+            transform: scale(1.05);
+        }
+
+        .M:hover {
+            transform: scale(1.05);
+        }
+
+        .G:hover {
+            transform: scale(1.05);
+        }
+
+        .adc {
+            background-color: #fae58e;
+            width: 280px;
+            height: 75px;
+            border-radius: 5%;
+            border: none;
+            font-family: 'nunito' sans-serif;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .adc:hover {
+            transform: scale(1.01);
+        }
+
+        .prodd {
+            cursor: pointer;
+            text-align: center;
+            border: none;
+            font-family: 'nunito' sans-serif;
+            color: solid black;
+            background-color: white;
+            margin-left: 14px;
+            font-size: 14px;
+            margin-top: 17px;
+            position: relative;
+        }
+
+        #esconderDesc {
+            width: 397.5px;
+        }
+
+        .tab {
+
+            cursor: pointer;
+            text-align: center;
+            border: none;
+            font-family: 'nunito' sans-serif;
+            color: solid black;
+            background-color: white;
+            margin-left: 14px;
+            font-size: 14px;
+            margin-top: 17px;
+            position: relative;
+        }
+
+        .prodd:hover {
+            transform: scale(1.01);
+        }
+
+        .tab:hover {
+            transform: scale(1.01);
+        }
+
+        .dcep {
+            background-color: #c9c7cd;
+            border-radius: 50px;
+            border: black;
+            height: 30px;
+            width: 140px;
+            padding: 0 0 0 10px;
+
+        }
+
+        .ok {
+            border-radius: 10px;
+            border: #ccc;
+            background-color: #c9c7cd;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .ok:hover {
+            transform: scale(1.01);
+        }
+
+        .nsei {
+            cursor: pointer;
+            text-align: center;
+            border: none;
+            font-family: 'nunito' sans-serif;
+            color: solid black;
+            margin-top: 10px;
+        }
+
+        .esconder {
+            display: none;
+        }
+
+        .nunito {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .oswald {
+            font-family: 'Oswald';
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body>section>div>div>ul>li>a {
+            text-decoration: none;
+            color: black;
+        }
+
+        body>section>div>div>ul>li>a:hover {
+            color: #5271FF;
+            text-decoration: underline;
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0px;
+            justify-content: space-between;
+            background-color: antiquewhite;
+            width: 100%;
+            margin: 100px 0 0 0;
+            background-image: linear-gradient(to right, #ffa142dc, #fffc3083);
+            border-top: 3px solid black;
+        }
+
+        .footer-main-div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+            margin: 10px 150px 10px 150px;
+            padding: 5px;
+            justify-content: space-between;
+        }
+
+        .footer-secoes {
+            display: flex;
+            flex-direction: column;
+            width: 230px;
+            justify-content: first baseline;
+            margin: 10px;
+            padding: 10px;
+
+        }
+
+        .footer-diferente {
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+            width: 100%;
+            border-top: 3px solid black;
+        }
+
+        .footer-secoes-2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 5px 150px 5px 150px;
+            padding: 10px;
+        }
+
+        .titulos {
+            font-size: 18px;
+            margin: 5px;
+            padding: 3px;
+        }
+
+        .blank {
+            display: flex;
+            width: 100%;
+            height: 100px;
+            background-image: linear-gradient(to right, #ffa142dc, #fffc3083);
+            border-top: 3px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="alinhar-topo">
+            <div class="topo">
+                <div>
+                    <a href="tel:5562981531797" class="telefone" tabindex="0"><img src="/src/icones/telefone.png"
+                            alt="telefone" class="icones">(62)98153-1797</a>
+                </div>
+                <div>
+                    <a href="/index.html" class="cabecalho" tabindex="0">
+                        <img src="/src/imagens/Marca.png" alt="Marca Lança Caju" width="150px">
+                    </a>
+                </div>
+                <div class="icone-login-pesquisa">
+                    <!-- Barra de pesquisa -->
+                    <input type="text" class="search-bar" placeholder="Pesquisar" tabindex="0">
+                    <p class="login">Seja bem-vindo(a)!<a href="/login.html" tabindex="0">Entre ou cadastre-se</a></p>
+                    <a href="#" class="header-links"><img src="/src/icones/perfil.png" alt="P" class="icones"></a>
+                    <a href="#" class="header-links"><img src="/src/icones/favoritos.png" alt="F" class="icones"></a>
+                    <a href="/sacola.html" class="header-links"><img src="/src/icones/sacola.png" alt="C"
+                            class="icones"></a>
+                    <a href="#" class="header-links"><img src="/src/icones/acessibilidade2.png" alt="A" class="icones"
+                            id="menuAcessibilidade"></a>
+                    <div id="menu" class="menu">
+                        <ul>
+                            <li><a href="#" id="daltonismo">Daltonismo</a></li>
+                            <li><a href="#" id="dislexia">Dislexia</a></li>
+                            <li><a href="#" id="narrador">Narrador de Voz</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="faixa">
+            <p class="nunito">FRETE GRÁTIS a partir de R$ 199,90 em compras<a href="#">*Veja condições</a></p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">NOVIDADES</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CAMISA</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CROPPED</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CONJUNTO</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">MACACÃO</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">SHORT</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">T-SHIRT</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">VESTIDO</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="faixa-2">
+        <br>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="main-img">
+                <div class="sidebar">
+                    <div>
+                        <img src="/src/imagens/roupas/pantalona+cropped.png" class="img">
+                    </div>
+                    <div>
+                        <img src="/src/imagens/roupas/pantalona+cropped.png" class="img">
+                    </div>
+                    <div>
+                        <img src="/src/imagens/roupas/pantalona+cropped.png" class="img">
+                    </div>
+                </div>
+                <div class="imgp">
+                    <img src="/src/imagens/roupas/pantalona+cropped.png  ">
+                </div>
+            </div>
+            <div class="desc">
+                <h2 class="nunito">Pantalona + Cropped Morcego | Lança Caju</h2>
+                <h3 class="nunito">R$ 350,00</h3>
+                <div class="nunito">
+                    <h2>Cor</h2>
+                    <div class="desc">
+                        <button class="corb"></button>
+                        <p class="nunito" style="font-size: 15px; margin: 2px;">Preto</p>
+                        <br>
+                        <div class="PMG">
+                            <button class="P">P</button>
+                            <button class="M">M</button>
+                            <button class="G">G</button>
+                        </div>
+                    </div>
+
+
+                    <button class="prodd" id="buttonDesc">Descrição do produto</button>
+                    <div class="nunito">
+                        <div id="esconderDesc" class="esconder">
+                            <p>
+                                O estilo descontraído e vibrante com nosso conjunto Pantalona e Cropped com estampas
+                                coloridas. Feito com tecido leve e respirável, este macacão é perfeito para dias ensolarados e aventuras urbanas.
+                                <br><br>
+                                Design Vibrante: Apresenta uma variedade de estampas coloridas que adicionam um toque de diversão e energia ao seu visual.
+                                <br><br>
+                                Confortável e Versátil: O tecido macio e confortável permite movimentos livres enquanto mantém você fresco e confortável durante todo o dia.
+                                <br><br>
+                                Corte Moderno: O ajuste elegante e contemporâneo oferece um visual moderno e feminino, complementando sua figura de forma lisonjeira.
+                                <br><br>
+                                Ideal para Todas as Ocasiões: Perfeito para um passeio casual, um dia de compras com amigos ou uma escapada de fim de semana. Este macacão é uma escolha versátil para qualquer ocasião.
+                                <br><br>
+                                Cor: Verde com estampas coloridas
+                                <br><br>
+                                Tecido: Leve e respirável
+                                <br><br>
+                                Tamanhos Disponíveis: P, M, G
+                                <br><br>
+                                Material: 100% poliéster
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="tab" id="buttonMedidas">Tabela de tamanhos</button>
+                    <div class="nunito">
+                        <div id="esconderMedidas" class="esconder">
+                            <table>
+                                <tr>
+                                    <th>Tamanho</th>
+                                    <th>Busto</th>
+                                    <th>Cintura</th>
+                                    <th>Quadril</th>
+                                </tr>
+
+                                <tr>
+                                    <td class="oswald">P</td>
+                                    <td>80cm - 84cm</td>
+                                    <td>64cm - 68cm</td>
+                                    <td>88cm - 92cm</td>
+                                </tr>
+                                <tr>
+                                    <td class="oswald">M</td>
+                                    <td>85cm - 89cm</td>
+                                    <td>69cm - 73cm</td>
+                                    <td>93cm - 97cm</td>
+                                </tr>
+                                <tr>
+                                    <td class="oswald">G</td>
+                                    <td>90cm - 94cm</td>
+                                    <td>74cm - 78cm</td>
+                                    <td>98cm - 102cm</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                    <br><br>
+                    <button class="adc" class="nunito" onclick="addProductById(2)">Adicionar a sacola</button>
+                    <br><br>
+                    <div class="nunito">
+                        <c class="ConsultarFrete"> Consulte seu frete</c>
+                        <div id="consultar-frete">
+
+
+                            <input class="dcep" type="text" id="cep" placeholder="Digite seu CEP">
+
+                            <button class="ok" class="oswald"> Ok</button>
+                        </div>
+                    </div>
+                    <button class="nsei" class="oswald" onclick="naoSeiCep()"> Não sei meu CEP</button>
+                    <script>
+                        function naoSeiCep() {
+                            this.window.location.href = "https://www.google.com/maps";
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="footer">
+        <div class="footer-main-div">
+            <div class="footer-secoes">
+                <h1 class="titulos">Ajuda</h1>
+                <ul class="links">
+                    <li><a href="#">Atendimento</a></li>
+                    <li><a href="#">Troca e Devolução</a></li>
+                    <li><a href="#">Canal de Denúncias</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-secoes">
+                <h1 class="titulos">Sobre</h1>
+                <ul class="links">
+                    <li><a href="#">A empresa Lança Caju</a></li>
+                    <li><a href="#">Lojistas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-secoes">
+                <h1 class="titulos">Fale Conosco</h1>
+                <ul class="links">
+                    <li><a href="tel:5562981531797">+55 (62)9 8153-1797</a></li>
+                    <li><a href="mailto:lancacaju@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-diferente">
+            <div class="footer-secoes-2">
+                <h1 class="titulos">Formas de Pagamento</h1>
+                <img src="/src/icones/cartoes.png" data-original="/src/icones/cartoes.png"
+                    data-alternative="/src/icones/cartoes-aces.png" class="icones">
+                <img src="/src/icones/pix.png" data-original="/src/icones/pix.png"
+                    data-alternative="/src/icones/pix-aces.png" class="icones">
+            </div>
+
+            <div class="footer-secoes-2">
+                <a href="https://www.instagram.com/lancacaju/"><img src="/src/icones/intagram.png"
+                        data-original="/src/icones/instagram.png" data-alternative="/src/icones/instagram-aces.png"
+                        class="icones"></a>
+                <a href="https://wa.me/message/CWFKIY27JVVXB1"><img src="/src/icones/whatsapp.png"
+                        data-original="/src/icones/whatsapp.png" data-alternative="/src/icones/whatsapp-aces.png"
+                        class="icones"></a>
+                <a href=""><img src="/src/icones/pinterest.png" data-original="/src/icones/pinterest.png"
+                        data-alternative="/src/icones/pinterest-aces.png" class="icones"></a>
+                <a href=""><img src="/src/icones/tiktok.png" data-original="/src/icones/tiktok.png"
+                        data-alternative="/src/icones/tiktok-aces.png" class="icones"></a>
+            </div>
+        </div>
+        <div class="blank">
+            <p></p>
+        </div>
+    </section>
+</body>
+</html>

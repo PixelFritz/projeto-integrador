@@ -2,503 +2,603 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lança Caju - Home</title>
-  <link rel="shortcut icon" href="./src/favicon/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lança Caju - Home</title>
+    <link rel="shortcut icon" href="./src/favicon/favicon.ico" type="image/x-icon">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Alice&family=Arimo:ital,wght@0,400..700;1,400..700&family=Cardo:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Questrial&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Arimo:ital,wght@0,400..700;1,400..700&family=Cardo:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Questrial&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/scrollbar.css">
-  <link rel="stylesheet" href="./css/popup.css">
-  <link rel="stylesheet" href="./css/acessibilidade.css">
-  <link rel="stylesheet" href="./css/daltonismo.css">
+    <link rel="stylesheet" href="./css/scrollbar.css">
+    <link rel="stylesheet" href="./css/popup.css">
+    <link rel="stylesheet" href="./css/acessibilidade.css">
+    <link rel="stylesheet" href="./css/daltonismo.css">
 
-  <script src="./js/menu.js" defer></script>
-  <script src="./js/popup.js" defer></script>
-  <script src="./js/acessibilidade.js" defer></script>
-  <script src="./js/daltonismo.js" defer></script>
+    <script src="./js/menu.js" defer></script>
+    <script src="./js/popup.js" defer></script>
+    <script src="./js/acessibilidade.js" defer></script>
+    <script src="./js/daltonismo.js" defer></script>
 
-  <style>
-    body {
-      font-family: 'Nunito';
-      margin: 0;
-    }
+    <style>
+        body { 
+            font-family: 'Nunito', sans-serif;
+            font-weight: 400;
+            margin: 0;
+        }
 
-    header {
-      margin: 0;
-    }
+        header {
+            margin: 0;
+        }
 
-    .alinhar-topo {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        .alinhar-topo {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .topo {
-      display: flex;
-      flex-wrap: wrap;
-    }
+        .topo {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-    /* Estilizando o cabeçalho */
-    .topo {
-      color: #fff;
-      padding: 10px 0;
-      text-align: center;
-      justify-content: space-between;
-    }
+        /* Estilizando o cabeçalho */
+        .topo {
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            justify-content: space-between;
+        }
 
-    .icones {
-      width: 30px;
-      height: 30px;
-      padding: 3px;
-    }
+        .icones {
+            width: 30px;
+            height: 30px;
+            padding: 3px;
+        }
 
-    .telefone {
-      text-decoration: none;
-      color: black;
-      display: flex;
-      width: 173px;
-      justify-content: left;
-      margin: 20px 0 0 20px;
-      align-items: center;
-    }
+        .telefone {
+            text-decoration: none;
+            color: black;
+            display: flex;
+            width: 173px;
+            justify-content: left;
+            margin: 20px 0 0 20px;
+            align-items: center;
+        }
 
-    .cabecalho {
-      padding: 5px;
-      width: 200px;
-      display: flex;
-      margin: auto;
-      justify-content: center;
-      margin-left: 350px;
-    }
+        .cabecalho {
+            padding: 5px;
+            width: 200px;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            margin-left: 350px;
+        }
 
-    .login {
-      display: grid;
-      height: 15px;
-      color: black;
-      justify-content: center;
-    }
+        .login {
+            display: grid;
+            height: 15px;
+            color: black;
+            justify-content: center;
+        }
 
-    .login>a {
-      text-decoration: none;
-      color: black;
-    }
+        .login>a {
+            text-decoration: none;
+            color: black;
+        }
 
-    .login>a:hover {
-      text-decoration: underline;
-      color: #5271FF;
-    }
+        .login>a:hover {
+            text-decoration: underline;
+            color: #5271FF;
+        }
 
-    .icone-login-pesquisa {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      flex-direction: row;
-      margin: 0;
-      text-decoration: none;
-      margin-right: 20px;
-    }
+        .icone-login-pesquisa {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            flex-direction: row;
+            margin: 0;
+            text-decoration: none;
+            margin-right: 20px;
+        }
 
-    /* Estilizando a barra de pesquisa */
-    .search-bar {
-      width: 188px;
-      height: 5px;
-      padding: 15px;
-      margin: 0;
-      border: solid rgba(0, 0, 0, 0.596) 2px;
-      border-radius: 50px;
-      /*margin-right: 10px;*/
-      margin-top: 16px;
-    }
+        /* Estilizando a barra de pesquisa */
+        .search-bar {
+            width: 188px;
+            height: 5px;
+            padding: 15px;
+            margin: 0;
+            border: solid rgba(0, 0, 0, 0.596) 2px;
+            border-radius: 50px;
+            /*margin-right: 10px;*/
+            margin-top: 16px;
+        }
 
-    .header-links {
-      margin-top: 15px;
-      height: 36px;
-    }
+        .header-links {
+            margin-top: 15px;
+            height: 36px;
+        }
 
-    .menu {
-      display: none;
-      position: absolute;
-      top: 60px;
-      right: 5px;
-      width: 150px;
-      background-color: white;
-      border: 1px solid #ccc;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-      text-align: left;
-      justify-content: center;
-    }
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 5px;
+            width: 150px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            text-align: left;
+            justify-content: center;
+        }
 
-    .menu>ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+        .menu>ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-    .menu>ul>li {
-      border-bottom: 1px solid #ccc;
-    }
+        .menu>ul>li {
+            border-bottom: 1px solid #ccc;
+        }
 
-    .menu>ul>li>a {
-      display: block;
-      padding: 10px;
-      text-decoration: none;
-      color: #333;
-    }
+        .menu>ul>li>a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
 
-    .menu>ul>li>a:hover {
-      background-color: rgb(241, 241, 241);
-    }
+        .menu>ul>li>a:hover {
+            background-color: rgb(241, 241, 241);
+        }
 
-    .header-banner {
-      display: block;
-      height: 221px;
-      background-image: linear-gradient(to right, #fffc3083, #FDFDFD);
-      width: 945px;
-      margin: auto;
-      padding: 0;
-      margin-top: 30px;
-    }
+        .header-banner {
+            display: block;
+            height: 221px;
+            background-image: linear-gradient(to right, #fffc3083, #FDFDFD);
+            width: 945px;
+            margin: auto;
+            padding: 0;
+            margin-top: 30px;
+        }
 
-    .header-banner>p {
-      margin: 0;
-      padding: 4px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 15px;
-    }
+        .header-banner>p {
+            margin: 0;
+            padding: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+        }
 
-    .header-banner>p>a {
-      text-decoration: none;
-      color: black;
-      margin-left: 4px;
-    }
+        .header-banner>p>a {
+            text-decoration: none;
+            color: black;
+            margin-left: 4px;
+        }
 
-    .banner {
-      width: 945px;
-      display: flex;
-      justify-content: center;
-      margin: auto;
-      padding: 0 0 25px 0;
-    }
+        .banner {
+            width: 945px;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            padding: 0 0 25px 0;
+        }
 
-    .banner:hover {
-      cursor: pointer;
-    }
+        .banner:hover {
+            cursor: pointer;
+        }
 
-    .header-banner>a:hover {
-      cursor: default;
-    }
+        .header-banner>a:hover {
+            cursor: default;
+        }
 
-    nav {
-      width: 945px;
-      margin: auto;
-    }
+        nav {
+            width: 945px;
+            margin: auto;
+        }
 
-    nav>ul>li>a:hover {
-      cursor: pointer;
-      text-decoration: underline rgba(0, 0, 0, 0.384) 3px;
-    }
+        nav>ul>li>a:hover {
+            cursor: pointer;
+            text-decoration: underline rgba(0, 0, 0, 0.384) 3px;
+        }
 
-    nav>ul {
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-    }
+        nav>ul {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
 
-    nav>ul>li {
-      display: inline-flex;
-      width: 100%;
-    }
+        nav>ul>li {
+            display: inline-flex;
+            width: 100%;
+        }
 
-    nav>ul>li>a {
-      display: block;
-      color: black;
-      text-decoration-line: none;
-      margin: 0;
-      background-color: white;
-      padding: 10px;
-      width: 105px;
-      border-radius: 0;
-      font-size: 12px;
-    }
+        nav>ul>li>a {
+            display: block;
+            color: black;
+            text-decoration-line: none;
+            margin: 0;
+            background-color: white;
+            padding: 10px;
+            width: 105px;
+            border-radius: 0;
+            font-size: 12px;
+        }
 
-    .cartao-produto:hover {
-      cursor: pointer;
-      background-color: rgb(241, 241, 241);
-      transform: scale(1.01);
-    }
+        .main-lista-roupas {
+            max-width: 1000px;
+            margin: auto;
+        }
 
-    .listagem-roupas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      justify-content: center;
-      margin: auto;
-      padding: 10px;
-    }
+        .cartao-produto:hover {
+            cursor: pointer;
+            background-color: rgb(241, 241, 241);
+            transform: scale(1.01);
+        }
 
-    .cartao-produto {
-      display: flex;
-      width: 200px;
-      height: 385px;
-      margin: 15px;
-      padding: 5px;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      border-radius: 2px;
-    }
+        .listagem-roupas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+            margin: auto;
+            padding: 10px;
+        }
 
-    .roupa {
-      justify-content: center;
-      width: 200px;
-      height: 300px;
-      margin: 0;
-    }
+        .cartao-produto {
+            display: flex;
+            width: 200px;
+            height: 385px;
+            margin: 15px;
+            padding: 5px;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            border-radius: 2px;
+        }
 
-    .descricao {
-      text-align: center;
-      margin: 0;
-      padding: 5px;
-    }
+        .cartao-produto>a {
+            text-decoration: none;
+            color: black;
+        }
 
-    .preco {
-      text-align: center;
-      font-size: 20px;
-      margin: 0;
-    }
+        .roupa {
+            justify-content: center;
+            width: 200px;
+            height: 300px;
+            margin: 0;
+        }
 
-    li {
-      list-style: none;
-    }
+        .descricao {
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+        }
 
-    body>section>div>div>ul>li>a {
-      text-decoration: none;
-      color: black;
-    }
+        .preco {
+            text-align: center;
+            font-size: 20px;
+            margin: 0;
+        }
 
-    body>section>div>div>ul>li>a:hover {
-      color: #5271FF;
-      text-decoration: underline;
-    }
+        li {
+            list-style: none;
+        }
 
-    .footer {
-      position: absolute;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0px;
-      justify-content: space-between;
-      background-color: antiquewhite;
-      width: 100%;
-      margin-top: 100px;
-      background-image: linear-gradient(to right, #ffa142dc, #fffc3083);
-      border-top: 3px solid black;
-    }
+        body>section>div>div>ul>li>a {
+            text-decoration: none;
+            color: black;
+        }
 
-    .footer-main-div {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      width: 100%;
-      margin: 10px 150px 10px 150px;
-      padding: 5px;
-      justify-content: space-between;
-    }
+        body>section>div>div>ul>li>a:hover {
+            color: #5271FF;
+            text-decoration: underline;
+        }
 
-    .footer-secoes {
-      display: flex;
-      flex-direction: column;
-      width: 230px;
-      justify-content: first baseline;
-      margin: 10px;
-      padding: 10px;
+        .footer {
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0px;
+            justify-content: space-between;
+            background-color: antiquewhite;
+            width: 100%;
+            margin-top: 100px;
+            background-image: linear-gradient(to right, #ffa142dc, #fffc3083);
+            border-top: 3px solid black;
+        }
 
-    }
+        .footer-main-div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+            margin: 10px 150px 10px 150px;
+            padding: 5px;
+            justify-content: space-between;
+        }
 
-    .footer-diferente {
-      background-color: white;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: space-between;
-      width: 100%;
-      border-top: 3px solid black;
-    }
+        .footer-secoes {
+            display: flex;
+            flex-direction: column;
+            width: 230px;
+            justify-content: first baseline;
+            margin: 10px;
+            padding: 10px;
 
-    .footer-secoes-2 {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin: 5px 150px 5px 150px;
-      padding: 10px;
-    }
+        }
 
-    .titulos {
-      font-size: 18px;
-      margin: 5px;
-      padding: 3px;
-    }
+        .footer-diferente {
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+            width: 100%;
+            border-top: 3px solid black;
+        }
 
-    .blank {
-      display: flex;
-      width: 100%;
-      height: 100px;
-      background-image: linear-gradient(to right, #ffa142dc, #fffc3083);
-      border-top: 3px solid black;
-    }
-  </style>
+        .footer-secoes-2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 5px 150px 5px 150px;
+            padding: 10px;
+        }
+
+        .titulos {
+            font-size: 18px;
+            margin: 5px;
+            padding: 3px;
+        }
+
+        .blank {
+            display: flex;
+            width: 100%;
+            height: 100px;
+            background-image: linear-gradient(to right, #ffa142dc, #fffc3083);
+            border-top: 3px solid black;
+        }
+    </style>
 
 </head>
 
 <body>
-  <header>
-    <div id="alinhar-topo">
-      <div class="topo">
-        <div>
-          <a href="tel:5562981531797" class="telefone" tabindex="0"><img src="./src/icones/telefone.png" data-original="./src/icones/telefone.png" data-alternative="./src/icones/telefone-aces.png" alt="telefone" class="icones">(62)98153-1797</a>
+    <header>
+        <div id="alinhar-topo">
+            <div class="topo">
+                <div>
+                    <a href="tel:5562981531797" class="telefone" tabindex="0"><img src="./src/icones/telefone.png"
+                            data-original="./src/icones/telefone.png" data-alternative="./src/icones/telefone-aces.png"
+                            alt="telefone" class="icones">(62)98153-1797</a>
+                </div>
+                <div>
+                    <a href="index.html" class="cabecalho" tabindex="0">
+                        <img src="./src/imagens/Marca.png" alt="Marca Lança Caju" width="150px">
+                    </a>
+                </div>
+                <div class="icone-login-pesquisa">
+                    <!-- Barra de pesquisa -->
+                    <input type="text" class="search-bar" placeholder="Pesquisar" tabindex="0">
+                    <p class="login">Seja bem-vindo(a)!<a href="login.html" tabindex="0">Entre ou cadastre-se</a></p>
+                    <a href="#" class="header-links"><img src="./src/icones/perfil.png"
+                            data-original="./src/icones/perfil.png" data-alternative="./src/icones/perfil-aces.png"
+                            alt="P" class="icon icones"></a>
+                    <a href="#" class="header-links"><img src="./src/icones/favoritos.png"
+                            data-original="./src/icones/favoritos.png"
+                            data-alternative="./src/icones/favoritos-aces.png" alt="F" class="icones"></a>
+                    <a href="sacola.html" class="header-links"><img src="./src/icones/sacola.png"
+                            data-original="./src/icones/sacola.png" data-alternative="./src/icones/sacola-aces.png"
+                            alt="C" class="icones"></a>
+                    <a href="#" class="header-links"><img src="./src/icones/acessibilidade2.png"
+                            data-original="./src/icones/acessibilidade2.png"
+                            data-alternative="./src/icones/acessibilidade-aces.png" alt="A" class="icones"
+                            id="menuAcessibilidade"></a>
+                    <div id="menu" class="menu">
+                        <ul>
+                            <li><a href="#" id="daltonismo">Daltonismo</a></li>
+                            <li><a href="#" id="dislexia">Dislexia</a></li>
+                            <li><a href="#" id="narrador">Narrador de Voz</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-          <a href="index.html" class="cabecalho" tabindex="0">
-            <img src="./src/imagens/Marca.png" alt="Marca Lança Caju" width="150px">
-          </a>
+        <div class="header-banner">
+            <p>FRETE GRÁTIS a partir de R$ 199,90 em compras<a href="#">*Veja condições</a></p>
+            <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"><img src="./src/imagens/image.png" alt="banner da coleção de verão" class="banner"></a>
+            </a>
         </div>
-        <div class="icone-login-pesquisa">
-          <!-- Barra de pesquisa -->
-          <input type="text" class="search-bar" placeholder="Pesquisar" tabindex="0">
-          <p class="login">Seja bem-vindo(a)!<a href="login.html" tabindex="0">Entre ou cadastre-se</a></p>
-          <a href="#" class="header-links"><img src="./src/icones/perfil.png" data-original="./src/icones/perfil.png" data-alternative="./src/icones/perfil-aces.png" alt="P" class="icon icones"></a>
-          <a href="#" class="header-links"><img src="./src/icones/favoritos.png" data-original="./src/icones/favoritos.png" data-alternative="./src/icones/favoritos-aces.png" alt="F" class="icones"></a>
-          <a href="#" class="header-links"><img src="./src/icones/sacola.png" data-original="./src/icones/sacola.png" data-alternative="./src/icones/sacola-aces.png" alt="C" class="icones"></a>
-          <a href="#" class="header-links"><img src="./src/icones/acessibilidade2.png" data-original="./src/icones/acessibilidade2.png" data-alternative="./src/icones/acessibilidade-aces.png" alt="A" class="icones" id="menuAcessibilidade"></a>
-          <div id="menu" class="menu">
-            <ul>
-              <li><a href="#" id="daltonismo">Daltonismo</a></li>
-              <li><a href="#" id="dislexia">Dislexia</a></li>
-              <li><a href="#" id="narrador">Narrador de Voz</a></li>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">NOVIDADES</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CAMISA</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CROPPED</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CONJUNTO</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">MACACÃO</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">SHORT</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">T-SHIRT</a>
+                <a
+                    href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">VESTIDO</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div id="popupMenu" class="popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>Bem-vindo ao site do Lança Caju!</h2>
+                <p>Esse site tem suporte de acessibilidade para Daltonismo, Dislexia e Deficiência visual.</p>
+            </div>
+        </div>
+        <div class="main-lista-roupas">
+            <ul class="listagem-roupas">
+                <li class="cartao-produto" tabindex="0" onclick="selectProduct(1)">
+                    <a href="html das peças/vestido-vermelho.html">
+                        <img src="./src/imagens/roupas/vestido-vermelho.png" alt="Vestido Vermelho Palmeira" class="roupa">
+                        <p class="descricao">Vestido Vermelho Palmeira | Lança Caju</p>
+                        <p class="preco">R$ 270,00</p>
+                    </a>
+                </li>
+                <li class="cartao-produto" tabindex="0" onclick="selectProduct(2)">
+                    <a href="html das peças/pantalona-cropped.html">
+                        <img src="./src/imagens/roupas/pantalona+cropped.png" alt="Pantalona e Cropped Preto com Estampas"
+                        class="roupa">
+                        <p class="descricao">Pantalona + Cropped Morcego | Lança Caju</p>
+                        <p class="preco">R$ 350,00</p>
+                    </a>
+                </li>
+                <li class="cartao-produto" tabindex="0" onclick="selectProduct(3)">
+                    <a href="html das peças/macacao-azul.html">
+                        <img src="./src/imagens/roupas/macacao-azul.png" alt="Macacão Azul com Estampas de Frutas e Animais"
+                        class="roupa">
+                        <p class="descricao">Macacão Azul Abacaxi | Lança Caju</p>
+                        <p class="preco">R$ 330,00</p>
+                    </a>
+                </li>
+                <li class="cartao-produto" tabindex="0" onclick="selectProduct(4)">
+                    <a href="html das peças/macacao-flor-de-caju.html">
+                        <img src="./src/imagens/roupas/macacao-flor-de-caju.png"
+                        alt="Macacão Flor de Caju Amarelo com Estampas de Frutas e Folhas" class="roupa">
+                        <p class="descricao">Macacão Flor De Caju | Lança Caju</p>
+                        <p class="preco">R$ 230,00</p>
+                    </a>
+                </li>
+                <li class="cartao-produto" tabindex="0" onclick="selectProduct(5)">
+                    <a href="html das peças/macacao-tropical.html">
+                        <img src="./src/imagens/roupas/macacao-tropical.png"
+                        alt="Macacão Tropical Curto Preto com estampa de onça e folhas" class="roupa">
+                        <p class="descricao">Macacão Curto Tropical Preto | Lança Caju</p>
+                        <p class="preco">R$ 249,00</p>
+                    </a>
+                </li>
+                <li class="cartao-produto" tabindex="0" onclick="selectProduct(6)">
+                    <a href="html das peças/macacao-vermelho.html">
+                        <img src="./src/imagens/roupas/macacao-vermelho.png"
+                        alt="Macacão Vermelho Curto Tropical" class="roupa">
+                        <p class="descricao">Macacão Curto Tropical Vermelho | Lança Caju</p>
+                        <p class="preco">R$ 249,00</p>
+                    </a>
+                </li>
+                <li class="cartao-produto" tabindex="0" onclick="selectProduct(7)">
+                    <a href="html das peças/pantalona-blusa.html">
+                        <img src="./src/imagens/roupas/pantalona+blusa.png"
+                        alt="Pantalona e Blusa Azul com palmeiras e pássaros" class="roupa">
+                        <p class="descricao">Pantalona + Blusa Palmeira | Lança Caju</p>
+                        <p class="preco">R$ 310,00</p>
+                    </a>
+                </li>
+                <li class="cartao-produto" tabindex="0" onclick="selectProduct(8)">
+                    <a href="html das peças/saia-fenda.html">
+                        <img src="./src/imagens/roupas/saia-fenda.png"
+                        alt="Saia com Fenda cores variadas com estampa de folhas" class="roupa">
+                        <p class="descricao">Saia com Fenda Memórias | Lança Caju</p>
+                        <p class="preco">R$ 179,00</p>
+                    </a>
+                </li>
+                <li class="cartao-produto" tabindex="0" onclick="selectProduct(9)">
+                    <a href="html das peças/vestido-croche.html">
+                        <img src="./src/imagens/roupas/vestido-croche.png"
+                        alt="Vestido de crochê com saia de tecido com estampas" class="roupa">
+                        <p class="descricao">Vestido Longo Crochê | Lança Caju</p>
+                        <p class="preco">R$ 270,00</p>
+                    </a>
+                </li>
+                <li class="cartao-produto" tabindex="0" onclick="selectProduct(10)">
+                    <a href="html das peças/vestido-luar.html">
+                        <img src="./src/imagens/roupas/vestido-luar.png"
+                        alt="Vestido Longo Laranja com Estampas" class="roupa">
+                        <p class="descricao">Vestido Longo Luar | Lança Caju</p>
+                        <p class="preco">R$ 269,99</p>
+                    </a>
+                </li>
+                <li class="cartao-produto" tabindex="0" onclick="selectProduct(11)">
+                    <a href="html das peças/vestido-tropical.html">
+                        <img src="./src/imagens/roupas/vestido-tropical.png"
+                        alt="Vestido Longo Branco costas abertar com estampas coloridas" class="roupa">
+                        <p class="descricao">Vestido Longo Tropical | Lança Caju</p>
+                        <p class="preco">R$ 280,00</p>
+                    </a>
+                </li>
+                <li class="cartao-produto" tabindex="0" onclick="selectProduct(12)">
+                    <a href="html das peças/vestido-verao.html">
+                        <img src="./src/imagens/roupas/vestido-verao.png"
+                        alt="Vestido curto amarelo com estampas coloridas" class="roupa">
+                        <p class="descricao">Vestido Curto Verão Tropical | Lança Caju</p>
+                        <p class="preco">R$ 220,00</p>
+                    </a>
+                </li>
             </ul>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="header-banner">
-      <p>FRETE GRÁTIS a partir de R$ 199,90 em compras<a href="#">*Veja condições</a></p>
-      <a href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-        target="_blank"><img src="./src/imagens/image.png" alt="banner da coleção de verão" class="banner"></a>
-      </a>
-    </div>
-  </header>
-  <nav>
-    <ul>
-      <li>
-        <a
-          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">NOVIDADES</a>
-        <a
-          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CAMISA</a>
-        <a
-          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CROPPED</a>
-        <a
-          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">CONJUNTO</a>
-        <a
-          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">MACACÃO</a>
-        <a
-          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">SHORT</a>
-        <a
-          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">T-SHIRT</a>
-        <a
-          href="https://www.instagram.com/lancacaju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">VESTIDO</a>
-      </li>
-    </ul>
-  </nav>
-  <main>
-    <div id="popupMenu" class="popup">
-      <div class="popup-content">
-        <span class="close-btn">&times;</span>
-        <h2>Bem-vindo ao site do Lança Caju!</h2>
-        <p>Esse site tem suporte de acessibilidade para Daltonismo, Dislexia e Cegueira.</p>
-      </div>
-    </div>
-    <div class="main-lista-roupas">
-      <ul class="listagem-roupas">
-        <li class="cartao-produto" tabindex="0">
-          <img src="./src/imagens/roupas/vestido-vermelho.png" alt="Vestido Vermelho Palmeira" class="roupa">
-          <p class="descricao">Vestido Vermelho Palmeira | Lança Caju</p>
-          <p class="preco">R$ 270,00</p>
-        </li>
-        <li class="cartao-produto" tabindex="0">
-          <img src="./src/imagens/roupas/pantalona+cropped.png" alt="Pantalona e Cropped Preto com Estampas"
-            class="roupa">
-          <p class="descricao">Pantalona + Cropped Morcego | Lança Caju</p>
-          <p class="preco">R$ 350,00</p>
-        </li>
-        <li class="cartao-produto" tabindex="0">
-          <img src="./src/imagens/roupas/macacão-azul.png" alt="Macacão Azul com Estampas de Frutas e Animais"
-            class="roupa">
-          <p class="descricao">Macacão Azul Abacaxi | Lança Caju</p>
-          <p class="preco">R$ 330,00</p>
-        </li>
-        <li class="cartao-produto" tabindex="0">
-          <img src="./src/imagens/roupas/macacão-flor-de-caju.png"
-            alt="Macacão Flor de Caju Amarelo com Estampas de Frutas e Folhas" class="roupa">
-          <p class="descricao">Macacão FLor De Caju | Lança Caju</p>
-          <p class="preco">R$ 230,00</p>
-        </li>
-      </ul>
-    </div>
-  </main>
-  <section class="footer">
-    <div class="footer-main-div">
-      <div class="footer-secoes">
-        <h1 class="titulos">Ajuda</h1>
-        <ul class="links">
-          <li><a href="#">Atendimento</a></li>
-          <li><a href="#">Troca e Devolução</a></li>
-          <li><a href="#">Canal de Denúncias</a></li>
-        </ul>
-      </div>
+    </main>
+    <section class="footer">
+        <div class="footer-main-div">
+            <div class="footer-secoes">
+                <h1 class="titulos">Ajuda</h1>
+                <ul class="links">
+                    <li><a href="#">Atendimento</a></li>
+                    <li><a href="#">Troca e Devolução</a></li>
+                    <li><a href="#">Canal de Denúncias</a></li>
+                </ul>
+            </div>
 
-      <div class="footer-secoes">
-        <h1 class="titulos">Sobre</h1>
-        <ul class="links">
-          <li><a href="#">A empresa Lança Caju</a></li>
-          <li><a href="#">Lojistas</a></li>
-        </ul>
-      </div>
+            <div class="footer-secoes">
+                <h1 class="titulos">Sobre</h1>
+                <ul class="links">
+                    <li><a href="#">A empresa Lança Caju</a></li>
+                    <li><a href="#">Lojistas</a></li>
+                </ul>
+            </div>
 
-      <div class="footer-secoes">
-        <h1 class="titulos">Fale Conosco</h1>
-        <ul class="links">
-          <li><a href="tel:5562981531797">+55 (62)9 8153-1797</a></li>
-          <li><a href="mailto:lancacaju@gmail.com">Email</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-diferente">
-      <div class="footer-secoes-2">
-        <h1 class="titulos">Formas de Pagamento</h1>
-        <img src="./src/icones/cartoes.png" data-original="./src/icones/cartoes.png" data-alternative="./src/icones/cartoes-aces.png" class="icones">
-        <img src="./src/icones/pix.png" data-original="./src/icones/pix.png" data-alternative="./src/icones/pix-aces.png" class="icones">
-      </div>
+            <div class="footer-secoes">
+                <h1 class="titulos">Fale Conosco</h1>
+                <ul class="links">
+                    <li><a href="tel:5562981531797">+55 (62)9 8153-1797</a></li>
+                    <li><a href="mailto:lancacaju@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-diferente">
+            <div class="footer-secoes-2">
+                <h1 class="titulos">Formas de Pagamento</h1>
+                <img src="./src/icones/cartoes.png" data-original="./src/icones/cartoes.png"
+                    data-alternative="./src/icones/cartoes-aces.png" class="icones">
+                <img src="./src/icones/pix.png" data-original="./src/icones/pix.png"
+                    data-alternative="./src/icones/pix-aces.png" class="icones">
+            </div>
 
-      <div class="footer-secoes-2">
-        <a href="https://www.instagram.com/lancacaju/"><img src="./src/icones/intagram.png" data-original="./src/icones/instagram.png" data-alternative="./src/icones/instagram-aces.png" class="icones"></a>
-        <a href="https://wa.me/message/CWFKIY27JVVXB1"><img src="./src/icones/whatsapp.png" data-original="./src/icones/whatsapp.png" data-alternative="./src/icones/whatsapp-aces.png" class="icones"></a>
-        <a href=""><img src="./src/icones/pinterest.png" data-original="./src/icones/pinterest.png" data-alternative="./src/icones/pinterest-aces.png"class="icones"></a>
-        <a href=""><img src="./src/icones/tiktok.png" data-original="./src/icones/tiktok.png" data-alternative="./src/icones/tiktok-aces.png" class="icones"></a>
-      </div>
-    </div>
-    <div class="blank">
-      <p></p>
-    </div>
-  </section>
+            <div class="footer-secoes-2">
+                <a href="https://www.instagram.com/lancacaju/"><img src="./src/icones/intagram.png"
+                        data-original="./src/icones/instagram.png" data-alternative="./src/icones/instagram-aces.png"
+                        class="icones"></a>
+                <a href="https://wa.me/message/CWFKIY27JVVXB1"><img src="./src/icones/whatsapp.png"
+                        data-original="./src/icones/whatsapp.png" data-alternative="./src/icones/whatsapp-aces.png"
+                        class="icones"></a>
+                <a href=""><img src="./src/icones/pinterest.png" data-original="./src/icones/pinterest.png"
+                        data-alternative="./src/icones/pinterest-aces.png" class="icones"></a>
+                <a href=""><img src="./src/icones/tiktok.png" data-original="./src/icones/tiktok.png"
+                        data-alternative="./src/icones/tiktok-aces.png" class="icones"></a>
+            </div>
+        </div>
+        <div class="blank">
+            <p></p>
+        </div>
+    </section>
 </body>
 
 </html>
