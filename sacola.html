@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sacola de Compras</title>
     <script src="js/carrinho.js" defer></script>
+    <script src="js/finalizar.js" defer></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -644,6 +645,44 @@
             background-image: linear-gradient(to right, #ffa142dc, #fffc3083);
             border-top: 3px solid black;
         }
+
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+        }
+
+        .modal-content p {
+            margin: 20px 0 20px 0;
+            padding: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -726,25 +765,35 @@
                     <div class="produto">
 
                         <div>
-                            <img src="/src/imagens/roupas/vestido-vermelho.png" alt="" width="100px" height="157px">
+                            <a href="html das peças/vestido-vermelho.html">
+                                <img src="/src/imagens/roupas/vestido-vermelho.png" alt="" width="100px" height="157px">
+                            </a>
                             <h4>Vestido Vermelho</h4>
                             <p>Palmeira | Lança Caju</p>
                             <span>R$270,00</span>
                         </div>
                         <div>
-                            <img src="/src/imagens/roupas/pantalona+cropped.png" alt="" width="100px" height="157px">
+                            <a href="html das peças/pantalona-cropped.html">
+                                <img src="/src/imagens/roupas/pantalona+cropped.png" alt="" width="100px"
+                                    height="157px">
+                            </a>
                             <h4>Pantalona + Cropped</h4>
                             <p>Morcego | Lança Caju</p>
                             <span>R$350,00</span>
                         </div>
                         <div>
-                            <img src="/src/imagens/roupas/macacao-azul.png" alt="" width="100px" height="157px">
+                            <a href="html das peças/macacao-azul.html">
+                                <img src="/src/imagens/roupas/macacao-azul.png" alt="" width="100px" height="157px">
+                            </a>
                             <h4>Macacão Azul</h4>
                             <p>Abacaxi | Lança Caju</p>
                             <span>R$330,00</span>
                         </div>
                         <div>
-                            <img src="/src/imagens/roupas/macacao-flor-de-caju.png" alt="" width="100px" height="157px">
+                            <a href="html das peças/macacao-flor-de-caju.html">
+                                <img src="/src/imagens/roupas/macacao-flor-de-caju.png" alt="" width="100px"
+                                    height="157px">
+                            </a>
                             <h4>Macacão Flor De Caju</h4>
                             <p>Lança Caju</p>
                             <span>R$230,00</span>
@@ -780,7 +829,13 @@
                             <div class="finalizar">
                                 <div class="subtotal">
                                     <h1 id="total"></h1>
-                                    <button class="fcompra">FINALIZAR</button>
+                                    <button class="fcompra" id="fcompra">FINALIZAR</button>
+                                </div>
+                                <div id="myModal" class="modal">
+                                    <div class="modal-content">
+                                        <span class="close">&times;</span>
+                                        <p>Sua compra foi finalizada com sucesso, confira seu e-mail para mais informações.</p>
+                                    </div>
                                 </div>
                                 <br>
                                 <a class="continue" href="#">Continuar comprando > </a>
